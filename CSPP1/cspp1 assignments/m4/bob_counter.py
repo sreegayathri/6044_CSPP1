@@ -10,7 +10,6 @@ def main():
     s_abc = input()
     sub_abc = 'bob'
     result_abc = 0
-    s_len = len(s_abc)
     sub_len = len(sub_abc)
     for i in range(len(s_abc)):
         if s_abc[i:i+sub_len] == sub_abc:
