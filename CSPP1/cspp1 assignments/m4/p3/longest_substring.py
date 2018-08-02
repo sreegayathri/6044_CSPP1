@@ -19,7 +19,7 @@ cleared your head.'''
 
 def main():
     """ Longest substring in alphabetical order """
-    STRING_A = "abcdbc"
+    STRING_AB = "abcdbc"
     S_AB = 0
     COUNT_AB = 0
     COUNT1_AB = 0
@@ -32,6 +32,6 @@ def main():
         else:
             COUNT_AB = 0
     STR_AB = S_AB - COUNT1_AB
-print(string[STR_AB:S_AB + 1])
+print(STRING_AB[STR_AB:S_AB + 1])
 if __name__ == "__main__":
     main()
