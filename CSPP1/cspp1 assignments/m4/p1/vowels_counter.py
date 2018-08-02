@@ -8,7 +8,7 @@ For example, if s = 'azcbobobegghakl', your program should print:
 def main():
     """ to find the number of vowels in a string"""
     count_a = 0
-    char_a = input("enter a string")
+    count_a = input("enter a string")
     for char_a in char_a:
         if char_a in ('a', 'e', 'i', 'o', 'u'):
             count_a += 1
