@@ -14,23 +14,24 @@ Longest substring in alphabetical order is: abc
 Note: This problem may be challenging. We encourage you to work smart.
 If you've spent more than a few hours on this problem, we suggest that
 you move on to a different part of the course.
-If you have time, come back to this problem after you've had a break and cleared your head.'''
+If you have time, come back to this problem after you've had a break and
+cleared your head.'''
 
 def main():
 	""" Longest substring in alphabetical order """
-	string_ab = "abcdbc"
-	s_ab = 0
-	count_ab = 0
-	count1_ab = 0
-	for i in range(len(string_ab) - 1):# comparing the indices
-    	if string_ab[i] <= string_ab[i+1]:# comparing the characters in the indices
-        	count_ab += 1
-        	if count_ab > count1_ab:
-            	count1_ab = count_ab
-            	s_ab = i + 1
+	STRING_A = "abcdbc"
+	S_AB = 0
+	COUNT_AB = 0
+	COUNT1_AB = 0
+	for i in range(len(STRING_AB) - 1):# comparing the indices
+    	if STRING_AB[i] <= STRING_AB[i+1]:# comparing the characters in the indices
+        	COUNT_AB += 1
+        	if COUNT_AB > COUNT1_AB:
+            	COUNT1_AB = COUNT_AB
+            	S_AB = i + 1
     	else:
-        count_ab = 0
-	str1_ab = s_ab - count1_ab
-print(string_ab[str1_ab:s_abc+1])
+        COUNT_AB = 0
+	STR_AB = S_AB - COUNT1_AB
+print(string[STR_AB:S_AB + 1])
 if __name__ == "__main__":
 	main()
