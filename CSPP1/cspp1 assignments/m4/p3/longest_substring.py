@@ -32,6 +32,6 @@ def main():
         else:
             count_ab = 0
     str_ab = s_ab - count1_ab
-print(string_ab[str_ab:s_ab + 1])
+    print(string_ab[str_ab:s_ab + 1])
 if __name__ == "__main__":
     main()
