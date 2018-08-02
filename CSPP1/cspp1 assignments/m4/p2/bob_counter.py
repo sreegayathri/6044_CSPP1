@@ -15,5 +15,5 @@ def main():
         if s_abc[i:i+sub_len] == sub_abc:
             result_abc += 1
     print(result_abc)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
