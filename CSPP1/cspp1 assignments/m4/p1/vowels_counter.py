@@ -12,6 +12,6 @@ def main():
     for char_a in char_a:
         if char_a in ('a', 'e', 'i', 'o', 'u'):
             count_a += 1
-print(char_a)
+print(count_a)
 if __name__ == "__main__":
     main()
