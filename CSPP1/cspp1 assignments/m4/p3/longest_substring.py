@@ -19,7 +19,7 @@ cleared your head.'''
 
 def main():
     """ Longest substring in alphabetical order """
-    string_ab = "abcdbc"
+    string_ab = input()
     s_ab = 0
     count_ab = 0
     count1_ab = 0
