@@ -7,11 +7,11 @@ For example, if s = 'azcbobobegghakl', your program should print:
 #Number of vowels: 5'''
 def main():
     """ to find the number of vowels in a string"""
-    count_a = 0
-    count_a = input("enter a string")
-    for char_a in char_a:
-        if char_a in ('a', 'e', 'i', 'o', 'u'):
-            count_a += 1
-print(count_a)
+    count_abc = 0
+    count_abc = input("enter a string")
+    for char_abc in char_abc:
+        if char_abc in ('a', 'e', 'i', 'o', 'u'):
+            count_abc += 1
+    print(count_abc)
 if __name__ == "__main__":
     main()
