@@ -18,20 +18,20 @@ If you have time, come back to this problem after you've had a break and
 cleared your head.'''
 
 def main():
-	""" Longest substring in alphabetical order """
-	STRING_A = "abcdbc"
-	S_AB = 0
-	COUNT_AB = 0
-	COUNT1_AB = 0
-	for i in range(len(STRING_AB) - 1):# comparing the indices
-    	if STRING_AB[i] <= STRING_AB[i+1]:# comparing the characters in the indices
-        	COUNT_AB += 1
-        	if COUNT_AB > COUNT1_AB:
-            	COUNT1_AB = COUNT_AB
-            	S_AB = i + 1
-    	else:
+    """ Longest substring in alphabetical order """
+    STRING_A = "abcdbc"
+    S_AB = 0
+    COUNT_AB = 0
+    COUNT1_AB = 0
+    for i in range(len(STRING_AB) - 1):# comparing the indices
+        if STRING_AB[i] <= STRING_AB[i+1]:# comparing the characters in the indices
+            COUNT_AB += 1
+            if COUNT_AB > COUNT1_AB:
+                COUNT1_AB = COUNT_AB
+                S_AB = i + 1
+        else:
         COUNT_AB = 0
-	STR_AB = S_AB - COUNT1_AB
+    STR_AB = S_AB - COUNT1_AB
 print(string[STR_AB:S_AB + 1])
 if __name__ == "__main__":
-	main()
+    main()
