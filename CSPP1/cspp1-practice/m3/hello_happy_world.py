@@ -1,4 +1,4 @@
-happy=int(input("enter a number"))
-if (happy>2):
-	print("hello world")
-	
+"""this program is used to print hello world"""
+HAPPY = int(input("enter a number"))
+if HAPPY > 2:
+    print("hello world")
