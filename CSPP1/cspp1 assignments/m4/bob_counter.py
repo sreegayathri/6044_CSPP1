@@ -6,7 +6,7 @@ For example, if s = 'azcbobobegghakl', then your program should print
 Number of times bob occurs is: 2'''
 
 def main():
-	""" to count the number of times a substring occurs"""
+    """ to count the number of times a substring occurs"""
 S = 'azcbobobobegghakl'
 SUB = 'bob'
 RESULTS = 0
@@ -17,4 +17,4 @@ for i in range(len(S)):
         RESULTS += 1
 print(RESULTS)
 if __name__== "__main__":
-main()
+    main()
