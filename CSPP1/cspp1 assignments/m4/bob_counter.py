@@ -13,7 +13,7 @@ def main():
     s_abc = len(s_abc)
     sub_len = len(sub_abc)
     for i in range(len(s_abc)):
-        if S[i:i+sub_len] == sub_abc:
+        if s_abc[i:i+sub_len] == sub_abc:
             result_abc += 1
     print(result_abc)
 if __name__ == "__main__":
