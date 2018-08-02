@@ -30,7 +30,7 @@ def main():
                 COUNT1_AB = COUNT_AB
                 S_AB = i + 1
         else:
-        COUNT_AB = 0
+            COUNT_AB = 0
     STR_AB = S_AB - COUNT1_AB
 print(string[STR_AB:S_AB + 1])
 if __name__ == "__main__":
