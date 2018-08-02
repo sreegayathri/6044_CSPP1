@@ -16,5 +16,5 @@ for i in range(len(S)):
     if S[i:i+SUB_LEN] == SUB:
         RESULTS += 1
 print(RESULTS)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
