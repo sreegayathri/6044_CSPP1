@@ -7,14 +7,14 @@ Number of times bob occurs is: 2'''
 
 def main():
     """ to count the number of times a substring occurs"""
-    S = input()
-    SUB = 'bob'
-    RESULTS = 0
-    S_LEN = len(S)
-    SUB_LEN = len(SUB)
-    for i in range(len(S)):
-        if S[i:i+SUB_LEN] == SUB:
-            RESULTS += 1
-    print(RESULTS)
+    s_abc = input()
+    sub_abc = 'bob'
+    result_abc = 0
+    s_abc = len(s_abc)
+    sub_len = len(sub_abc)
+    for i in range(len(s_abc)):
+        if S[i:i+sub_len] == sub_abc:
+            result_abc += 1
+    print(result_abc)
 if __name__ == "__main__":
     main()
