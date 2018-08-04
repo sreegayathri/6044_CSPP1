@@ -8,11 +8,11 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_ab = input()
-    z_ = " "
+    z_a = " "
     ltr = ""
     for i in range(len(str_ab)):
         if str_ab[i] == "!" or str_ab[i] == "@" or str_ab[i] == "#" or str_ab[i] == "$" or str_ab[i] == "%" or str_ab[i] == "^" or str_ab[i] == "&"or str_ab[i] == "*":
-            ltr = ltr + z_
+            ltr = ltr + z_a
         else:
             ltr = ltr + str_ab[i]
     print(ltr)
