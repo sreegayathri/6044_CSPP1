@@ -14,7 +14,7 @@ def main():
             print("Fizz")
         elif num_a % 5 == 0:
             print("Buzz")
-    if num_a % 3 == 0 and num_a % 5 ==0:
+    if num_a % 3 == 0 and num_a % 5 == 0:
         print("Fizz")
         print("Buzz")
     else:
