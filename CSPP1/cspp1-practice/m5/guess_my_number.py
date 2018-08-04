@@ -10,11 +10,11 @@ print(guess + str(midNum) + "?")
 request = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. ")
 while request != 'c':
     if  request == 'h':
+        minNum = midNum
+        midNum = int((midNum + maxNum)/2)        
+    elif request == 'l':
         maxNum = midNum
         midNum = int((midNum + minNum)/2)
-    elif request == 'l':
-        minNum = midNum
-        midNum = int((midNum + maxNum)/2)
     else:
         print("Sorry, I did not understand your input.")
     print(guess + str(midNum) + "?")
