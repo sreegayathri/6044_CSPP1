@@ -1,0 +1,4 @@
+num_va = int(input())
+epsilon = 0.01
+low = 0
+high = num_va 
