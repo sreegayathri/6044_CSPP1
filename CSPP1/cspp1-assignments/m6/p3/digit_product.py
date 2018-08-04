@@ -5,10 +5,10 @@ def main():
     n_a = int(input())
     product = 1
     r_a = 0
-    if n_a > 0:
-        if n_a % 10 == 0:
-            r_a += 1
-            product *= r_a
+    while n_a > 0:
+        r_a = n_a % 10
+        product *= r_a
+        n_a = n_a//10
     print(product)
 if __name__ == "__main__":
     main()
