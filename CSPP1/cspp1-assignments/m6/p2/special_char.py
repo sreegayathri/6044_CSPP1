@@ -10,7 +10,7 @@ def main():
     str_ab = input()
     z_a = " "
     ltr = ""
-    for i in range(len(str_ab)):
+    for i in enumerate(len(str_ab)):
         if str_ab[i] == "!" or str_ab[i] == "@" or str_ab[i] == "#" or str_ab[i] == "$" or str_ab[i] == "%" or str_ab[i] == "^" or str_ab[i] == "&"or str_ab[i] == "*":
             ltr = ltr + z_a
         else:
