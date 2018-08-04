@@ -17,6 +17,7 @@ def main():
                 print("Fizz")
             elif num_a % 5 == 0:
                 print("Buzz")
+                break
         else:
             print("not a multiple of 3 and 5")
             if num_a % 3 == 0 and num_a % 5 == 0:
