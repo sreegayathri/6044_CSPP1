@@ -9,7 +9,7 @@
 # Input: 21950
 # Output: 21950 is not a perfect cube
 
-def main():
+def _main_():
     num_va = int(input())
     guess = 0
     epsilon = 0.1
