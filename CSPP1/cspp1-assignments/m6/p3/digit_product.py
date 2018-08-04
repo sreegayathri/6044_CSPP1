@@ -8,7 +8,7 @@ def main():
     '''
     Read any number from the input, store it in variable int_input.
     '''
-    num_a = int(input())
+    n_a = int(input())
     product = 1
     i = 0
     r_a = 0
