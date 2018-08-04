@@ -25,5 +25,5 @@ def main():
     else:
         print(num_va, "is a perfect cube")
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
