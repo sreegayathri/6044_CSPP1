@@ -19,7 +19,7 @@ def main():
                 print("Buzz")
                 break
         else:
-            print("not a multiple of 3 and 5")
+            print(num_a)
             if num_a % 3 == 0 and num_a % 5 == 0:
                 print("Fizz")
                 print("Buzz")
