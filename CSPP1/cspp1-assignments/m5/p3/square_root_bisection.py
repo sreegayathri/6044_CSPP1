@@ -1,6 +1,7 @@
 """Write a python program to find the square root of the given number
 using approximation method"""
 def main():
+    ''' print if the given string is perfect square or not using approximation method'''
     num_va = int(input())
     epsilon = 0.01
     low = 0

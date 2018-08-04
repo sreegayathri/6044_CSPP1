@@ -2,12 +2,7 @@
 using approximation method
 """
 def main():
-    """testcase 1
-input: 25
-output: 4.999999999999998
-testcase 2
-input: 49
-output: 6.999999999999991"""
+    ''' print if the given string is perfect square or not'''
     num_val = int(input())
     epsilon = 0.1
     guess = 0
