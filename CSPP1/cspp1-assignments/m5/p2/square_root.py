@@ -6,7 +6,6 @@ output: 4.999999999999998
 testcase 2
 input: 49
 output: 6.999999999999991"""
-
 def main():
     num_val = int(input())
     epsilon = 0.1
