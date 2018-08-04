@@ -12,17 +12,16 @@ def main():
     res_a = 0
     if num_a >= 0:
         for i in range(num_a+1):
-            res_a += 1
             if num_a % 3 == 0:
-                print("Fizz")
+                print(num_a + "Fizz")
             elif num_a % 5 == 0:
-                print("Buzz")
+                print(num_a + "Buzz")
                 break
         else:
             print(num_a)
             if num_a % 3 == 0 and num_a % 5 == 0:
-                print("Fizz")
-                print("Buzz")
+                print(num_a + "Fizz")
+                print(num_a + "Buzz")
             else:
                 print(num_a)
 if __name__ == "__main__":
