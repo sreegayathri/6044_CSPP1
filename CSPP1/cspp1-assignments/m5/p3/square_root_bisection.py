@@ -7,7 +7,7 @@ def main():
     high = num_va
     avg = (low/high)/2
     while abs(avg**2-num_va) >= epsilon:
-        if avg**2<num_va:
+        if avg**2 < num_va:
             low = avg
         else:
             high = avg
