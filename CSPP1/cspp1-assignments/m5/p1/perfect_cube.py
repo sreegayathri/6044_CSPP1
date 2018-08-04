@@ -9,7 +9,7 @@
 # Input: 21950
 # Output: 21950 is not a perfect cube
 
-def _main_():
+def main():
     num_va = int(input())
     guess = 0
     epsilon = 0.1
@@ -25,5 +25,5 @@ def _main_():
     else:
         print(num_va, "is a perfect cube")
 
-if __name__ == "__main__":
+if __name__== "__main__":
     main()
