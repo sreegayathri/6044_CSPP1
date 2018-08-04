@@ -10,18 +10,18 @@ using approximation method"""
 # output: 6.999999999999991
 
 def main():
-	num_va = int(input())
-	epsilon = 0.01
-	low = 0
-	high = num_va
-	avg = (low/high)/2
-	while abs(avg**2-num_va) >= epsilon:
-    	if avg**2 < num_va:
-        	low = avg
-    	else:
-        	high = avg
-    	avg = (low+high)/2
-	print(avg)
+    num_va = int(input())
+    epsilon = 0.001
+    low = 0
+    high = num_va
+    avg = (low/high)/2
+    while abs(avg**2-num_va) >= epsilon:
+        if avg**2<num_va:
+            low = avg
+        else:
+            high = avg
+        avg = (low+high)/2
+    print(avg)
 
 if __name__== "__main__":
-	main()
+    main()
