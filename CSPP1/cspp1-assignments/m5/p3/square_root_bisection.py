@@ -14,5 +14,5 @@ def main():
         avg = (low+high)/2
     print(avg)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
