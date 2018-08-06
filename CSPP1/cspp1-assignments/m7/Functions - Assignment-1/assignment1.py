@@ -31,7 +31,7 @@
 # (Monthly interest rate x Monthly unpaid balance)
 
 
-def paying_Debt_Off_In_A_Year(balance, annual_interest_rate, monthly_payment_rate):
+def paying_debt_Off_in_a_year(balance, annual_interest_rate, monthly_payment_rate):
     """ parameter on which the required calculations done"""
     previous_balance = balance
     for _ in range(12):
@@ -48,6 +48,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Remaining balance:", paying_Debt_Off_In_A_Year(data[0], data[1], data[2]))
+    print("Remaining balance:", paying_debt_Off_in_a_year(data[0], data[1], data[2]))
 if __name__ == "__main__":
     main()
