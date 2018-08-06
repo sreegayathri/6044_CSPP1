@@ -11,18 +11,14 @@ def main():
     num_a = int(input())
     res_a = 0
     if num_a >= 0:
-        for i in range(num_a+1):
-            if num_a % 3 == 0:
-                print(num_a + "Fizz")
-            elif num_a % 5 == 0:
-                print(num_a + "Buzz")
-                break
-        else:
-            print(num_a)
-            if num_a % 3 == 0 and num_a % 5 == 0:
-                print(num_a + "Fizz")
-                print(num_a + "Buzz")
+        for i in range(1,num_a+1):
+            if i % 3 == 0 and i % 5 == 0:
+                print("Fizz\nBuzz")
+            elif i % 3 == 0:
+                print("Fizz")
+            elif i % 5 == 0:
+                print("Buzz")
             else:
-                print(num_a)
+                print(i)
 if __name__ == "__main__":
     main()
