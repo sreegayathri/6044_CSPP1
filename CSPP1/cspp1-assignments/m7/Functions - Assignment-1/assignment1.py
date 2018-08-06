@@ -32,6 +32,7 @@
 
 
 def payingDebtOffInAYear(balance, annual_interest_rate, monthly_payment_rate):
+    """ parameter on which the required calculations done"""
     previous_balance = balance
     for _ in range(12):
         Monthly_interest_rate = (annual_interest_rate) / 12.0
