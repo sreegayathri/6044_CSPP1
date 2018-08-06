@@ -48,7 +48,7 @@ def paydebt_offinyr(balance, annual_irate):
     return round(minifxied_monthlypay, 2)
 
 def main():
-    # call the paydebt_offinyr function here
+    """call the paydebt_offinyr function here"""
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
