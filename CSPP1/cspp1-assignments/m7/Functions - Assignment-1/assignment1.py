@@ -35,10 +35,10 @@ def paying_debt_Off_in_a_year(balance, annual_interest_rate, monthly_payment_rat
     """ parameter on which the required calculations done"""
     previous_balance = balance
     for _ in range(12):
-        Mntly_irate = (annual_interest_rate) / 12.0
+        mntly_irate = (annual_interest_rate) / 12.0
         Minimum_monthly_payment = (monthly_payment_rate) * (previous_balance)
         mntly_unpbal = (previous_balance) - (Minimum_monthly_payment)
-        updated_balance_each_month = (mntly_unpbal) + (Mntly_irate * mntly_unpbal)
+        updated_balance_each_month = (mntly_unpbal) + (mntly_irate * mntly_unpbal)
         previous_balance = updated_balance_each_month
     return round(updated_balance_each_month, 2)
 
