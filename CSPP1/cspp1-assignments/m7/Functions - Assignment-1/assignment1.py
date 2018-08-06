@@ -40,7 +40,6 @@ def payingDebtOffInAYear(balance, annual_interest_rate, monthly_payment_rate):
         updated_balance_each_month = (Monthly_unpaid_balance) + (Monthly_interest_rate * Monthly_unpaid_balance)
         previous_balance = updated_balance_each_month
     return round(updated_balance_each_month, 2)
-    
 
 def main():
     data = input()
