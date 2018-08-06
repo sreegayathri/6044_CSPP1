@@ -53,6 +53,5 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     print("lowest payment:", str(paydebt_offinyr(data[0], data[1])))
-
 if __name__ == "__main__":
     main()
