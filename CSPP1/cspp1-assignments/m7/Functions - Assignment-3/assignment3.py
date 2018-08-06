@@ -11,13 +11,11 @@
 # is allowed, so your observations from running this experiment on the
 # grading system might be limited to an error message complaining
 # about too much time taken.)
-
-# Well then, how can we calculate a more accurate fixed monthly payment 
+#Well then, how can we calculate a more accurate fixed monthly payment 
 #than we did in Problem 2 without running into the problem of slow
 # code?
 # We can make this program run faster using a technique introduced in lecture 
-#- bisection search!
-
+# bisection search!
 # The following variables contain values as described below:
 # balance - the outstanding balance on the credit card
 # annualInterestRate - annual interest rate as a decimal
