@@ -43,14 +43,14 @@
 #(for more info check out the Wikipedia page on bisection search) to find
 # the smallest monthly payment to the cent (no more multiples of $10)
 # such that we can pay off the debt within a year. Try it out with
-# large inputs, and notice how fast it is 
+# large inputs, and notice how fast it is
 #(try the same large inputs in your solution to Problem 2 to compare!). Produce the same return
 # value as you did in Assignment 2.
 """
 
 
 def paydebt_offinyr(balance_i, annual_irate):
-    """ 
+    """
     input for the program with calulating parameters
     """
     init_balance = balance_i
@@ -66,9 +66,9 @@ def paydebt_offinyr(balance_i, annual_irate):
             balance_i = ans_i + (ans_i  * monthly_irate)
         if balance_i > epsilon_i:
             lower_i = monthly_payrates
-        elif balance_i <- epsilon_i:
+        elif balance_i < -epsilon_i:
             upper_i = monthly_payrates
-    return str(round(monthly_payrates,2))
+    return str(round(monthly_payrates, 2))
 
 def main():
     """ FINDING LOWEST PAYEMENT"""
