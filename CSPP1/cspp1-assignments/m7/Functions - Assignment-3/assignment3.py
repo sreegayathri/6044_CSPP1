@@ -35,13 +35,11 @@
 # we didn't =-67pay off each month. So a good upper bound for the monthly payment
 # would be one-twelfth of the balance, after having its
 # interest compounded monthly for an entire year.
-
 # In short:
 # Monthly interest rate = (Annual interest rate) / 12.0
 # Monthly payment lower bound = Balance / 12
 # Monthly payment upper bound = (Balance x (1 + Monthly interest rate)12) / 12.0
-
-# Write a program that uses these bounds and bisection search 
+# Write a program that uses these bounds and bisection search
 #(for more info check out the Wikipedia page on bisection search) to find
 # the smallest monthly payment to the cent (no more multiples of $10)
 # such that we can pay off the debt within a year. Try it out with
@@ -70,8 +68,6 @@ def paydebt_offinyr(balance_i, annual_irate):
             lower_i = monthly_payrates
         elif balance_i <- epsilon_i:
             upper_i = monthly_payrates
-        else:
-            break
     return str(round(monthly_payrates,2))
 
 def main():
