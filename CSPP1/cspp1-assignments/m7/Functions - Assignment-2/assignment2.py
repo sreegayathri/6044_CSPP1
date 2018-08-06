@@ -1,4 +1,4 @@
-# Assignment-2 - Paying Debt off in a Year
+""" Assignment-2 - Paying Debt off in a Year
 
 # Now write a program that calculates the minifixed_montlypay
 #needed in order pay off a credit card balance within 12 months.
@@ -25,27 +25,27 @@
 # monthly_irate = (Annual interest rate) / 12.0
 # monthly_unpbal = (Previous balance) - (minifixed_montlypay)
 # Updated balance each month = (monthly_unpbal) + (monthly_irate x monthly_unpbal)
+"""
 
 
-
-def paydebt_offinyr(balance, annualInterestRate):
-    # calculating fixed monthly payment
+def paydebt_offinyr(balance, annual_irate):
+    """# calculating fixed monthly payment
     #calculate the monthly intrest @ and unpaid balance
-    #updated bal each month 
+    #updated bal each month"""
     perv_bal = balance
     minifixed_montlypay = 10
     if balance <= 0:
         return 0
     while balance > 0:
         balance = perv_bal
-        monthly_irate =annual_irate/12
+        monthly_irate = annual_irate/12
         for _ in range(12):
             monthly_unpbal = balance - minifixed_montlypay
             uptdbal_eachmon = monthly_unpbal + (monthly_irate * monthly_unpbal)
             balance = uptdbal_eachmon
         minifixed_montlypay += 10
     minifixed_montlypay -= 10
-    return round(minifxd_monthlypay, 2)
+    return round(minifxied_monthlypay, 2)
 
 def main():
     # call the paydebt_offinyr function here
