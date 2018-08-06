@@ -43,6 +43,7 @@ def payingDebtOffInAYear(balance, annual_interest_rate, monthly_payment_rate):
 
 
 def main():
+    # find the payement of cerdit cards monthly
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
