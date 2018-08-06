@@ -73,7 +73,7 @@ def paydebt_offinyr(balance_i, annual_irate):
 def main():
     """ FINDING LOWEST PAYEMENT"""
     data = input()
-    """ data = "4773 0.2"""
+    # data = "4773 0.2
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", paydebt_offinyr(data[0], data[1]))
