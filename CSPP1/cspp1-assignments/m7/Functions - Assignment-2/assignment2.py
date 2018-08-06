@@ -40,8 +40,11 @@ def paydebt_offinyr(balance, annualInterestRate):
         balance = perv_bal
         monthly_irate =annual_irate/12
         for _ in range(12):
-            monthly_unpbal = (perv_bal) - (minifixed_montlypay)
-            Uptdbal_eachmon = (monthly_unpbal) + (monthly_irate * monthly_unpbal)
+            monthly_unpbal = balance - minifixed_montlypay
+            Uptdbal_eachmon = monthly_unpbal + (monthly_irate * monthly_unpbal)
+            balance = Uptdbal_eachmon
+        minifixed_montlypay += 10
+    minifixed_montlypay -= 10
         return (minifxd_monthlypay,2)
 
 def main():
