@@ -1,4 +1,4 @@
-# Functions - Assignment-3 - Using Bisection Search to Make the Program Faster
+"""# Functions - Assignment-3 - Using Bisection Search to Make the Program Faster
 
 # You'll notice that in Problem 2, your monthly payment had to be a multiple
 # of $10. Why did we make it that way? You can try running
@@ -11,10 +11,10 @@
 # is allowed, so your observations from running this experiment on the
 # grading system might be limited to an error message complaining
 # about too much time taken.)
-#Well then, how can we calculate a more accurate fixed monthly payment 
+#Well then, how can we calculate a more accurate fixed monthly payment
 #than we did in Problem 2 without running into the problem of slow
 # code?
-# We can make this program run faster using a technique introduced in lecture 
+# We can make this program run faster using a technique introduced in lecture
 # bisection search!
 # The following variables contain values as described below:
 # balance - the outstanding balance on the credit card
@@ -48,7 +48,7 @@
 # large inputs, and notice how fast it is 
 #(try the same large inputs in your solution to Problem 2 to compare!). Produce the same return
 # value as you did in Assignment 2.
-
+"""
 
 
 def paydebt_offinyr(balance_i, annual_irate):
@@ -75,11 +75,11 @@ def paydebt_offinyr(balance_i, annual_irate):
     return str(round(monthly_payrates,2))
 
 def main():
+    """ FINDING LOWEST PAYEMENT"""
     data = input()
-    # data = "4773 0.2"
+    """ data = "4773 0.2"""
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", paydebt_offinyr(data[0], data[1]))
-    
 if __name__ == "__main__":
     main()
