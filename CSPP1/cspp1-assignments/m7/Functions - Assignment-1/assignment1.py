@@ -34,12 +34,13 @@
 def payingDebtOffInAYear(balance, annual_interest_rate, monthly_payment_rate):
     previous_balance = balance
     for _ in range(12):
-        Monly_int_r = (antly_interest_r / 12.0
+        Monthly_interest_rate = (annual_interest_rate) / 12.0
         Minimum_monthly_payment = (monthly_payment_rate) * (previous_balance)
         Monthly_unpaid_balance = (previous_balance) - (Minimum_monthly_payment)
-        uptd_bal_each_mon = (Monthly_unpaid_balance) + (Monly_int_r * Montly_unpaid_bal)
-        previous_balance = uptd_bal_each_mon
-    return round(uptd_bal_each_mon, 2)
+        updated_balance_each_month = (Monthly_unpaid_balance) + (Monthly_interest_rate * Monthly_unpaid_balance)
+        previous_balance = updated_balance_each_month
+    return round(updated_balance_each_month, 2)
+
 
 def main():
     data = input()
