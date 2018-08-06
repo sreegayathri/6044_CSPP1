@@ -45,14 +45,14 @@ def paydebt_offinyr(balance, annualInterestRate):
             balance = Uptdbal_eachmon
         minifixed_montlypay += 10
     minifixed_montlypay -= 10
-    return round(minifxd_monthlypay,2)
+    return round(minifxd_monthlypay, 2)
 
 def main():
     # call the paydebt_offinyr function here
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("lowest payment:", str(paydebt_offinyr(data[0], data[1]))
-    
+    print("lowest payment:", str(paydebt_offinyr(data[0], data[1])))
+
 if __name__ == "__main__":
     main()

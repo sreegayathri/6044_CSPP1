@@ -22,7 +22,7 @@
 
 # What is a good upper bound? Imagine that instead of paying monthly, we paid off the entire balance at the end of the year. What we
 # ultimately pay must be greater than what we would've paid in monthly installments, because the interest was compounded on the balance
-# we didn't pay off each month. So a good upper bound for the monthly payment would be one-twelfth of the balance, after having its
+# we didn't =-67pay off each month. So a good upper bound for the monthly payment would be one-twelfth of the balance, after having its
 # interest compounded monthly for an entire year.
 
 # In short:
@@ -37,18 +37,35 @@
 
 
 
-def paydebt_offinyr(balance, annualInterestRate):
-	Monthly interest rate = (Annual interest rate) / 12.0
-	Monthly payment lower bound = Balance / 12
-	Monthly payment upper bound = (Balance x (1 + Monthly interest rate)12) / 12.0
-
+def paydebt_offinyr(balance_i, annual_irate):
+    """ 
+    input for the program with calulating parameters
+    """
+    init_balance = balance_i
+    monthly_irate = annual_irate/12
+    lower_i = init_balance/12
+    upper_i = (init_balance * (1 + monthly_irate)**12)/12.0
+    epsilon_i = 0.03
+    while abs(balance_i) > epsilon_i:
+        monthly_payrates = (upper_i + lower_i)/2
+        balance_i = init_balance
+        for _ in range(12):
+            ans_i = balance_i - monthly_payrates
+            balance_i = ans_i + (ans_i  * monthly_irate)
+        if balance_i > epsilon_i:
+            lower_i = monthly_payrates
+        elif balance_i <- epsilon_i:
+            upper_i = monthly_payrates
+        else:
+            break
+    return str(round(monthly_payrates,2))
 
 def main():
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print(paydebt_offinyr(data[0],data[1]))
+    print("pay in month:", paydebt_offinyr(data[0], data[1]))
     
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
