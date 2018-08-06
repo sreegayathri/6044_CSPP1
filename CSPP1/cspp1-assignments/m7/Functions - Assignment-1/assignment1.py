@@ -27,7 +27,8 @@
 # Monthly interest rate= (Annual interest rate) / 12.0
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
-# Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
+# Updated balance each month = (Monthly unpaid balance) +
+# (Monthly interest rate x Monthly unpaid balance)
 
 
 def payingDebtOffInAYear(balance, annual_interest_rate, monthly_payment_rate):
