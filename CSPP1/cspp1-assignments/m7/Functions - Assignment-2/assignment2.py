@@ -26,8 +26,6 @@
 # monthly_unpbal = (Previous balance) - (minifixed_montlypay)
 # Updated balance each month = (monthly_unpbal) + (monthly_irate x monthly_unpbal)
 """
-
-
 def paydebt_offinyr(balance, annual_irate):
     """# calculating fixed monthly payment
     #calculate the monthly intrest @ and unpaid balance
@@ -45,8 +43,7 @@ def paydebt_offinyr(balance, annual_irate):
             balance = uptdbal_eachmon
         minifixed_montlypay += 10
     minifixed_montlypay -= 10
-    return round(minifxied_montlypay, 2)
-
+    return round(minifixed_montlypay, 2)
 def main():
     """call the paydebt_offinyr function here"""
     data = input()
