@@ -45,7 +45,7 @@ def paydebt_offinyr(balance, annual_irate):
             balance = uptdbal_eachmon
         minifixed_montlypay += 10
     minifixed_montlypay -= 10
-    return round(minifxied_monthlypay, 2)
+    return round(minifxied_montlypay, 2)
 
 def main():
     """call the paydebt_offinyr function here"""
