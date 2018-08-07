@@ -1,10 +1,8 @@
 """ Exercise: Assignment-2
-# Write a Python function, sumofdigits, that takes in one 
+# Write a Python function, sumofdigits, that takes in one
 number and returns the sum of digits of given number.
-
-# This function takes in one number and returns one number.
+# This function takes in one number and returns one number
 """
-
 def sumofdigits(n_):
     '''
     n is positive Integer
@@ -24,8 +22,8 @@ def sumofdigits(n_):
     return sum_digit + sumofdigits(n)
 
 def main():
-    a = input()
-    print(sumofdigits(int(a)))
+    a_ = input()
+    print(sumofdigits(int(a_)))
 
 if __name__== "__main__":
     main()
