@@ -3,7 +3,7 @@
 number and returns the sum of digits of given number.
 # This function takes in one number and returns one number
 """
-def sumofdigits(n_):
+def sumofdigits(n_a):
     '''
     n is positive Integer
 
@@ -13,17 +13,17 @@ def sumofdigits(n_):
     '''
     # Your code here
     sum_digit = 0
-    if n_ == 0:
+    if n_a == 0:
         return sum_digit
     else:
-        rem_ = n_ % 10
-        sum_digit += rem_
-        n_ = n_//10
-    return sum_digit + sumofdigits(n)
+        rem_r = n_a % 10
+        sum_digit += rem_r
+        n_a = n_a//10
+    return sum_digit + sumofdigits(n_a)
 
 def main():
-    a_ = input()
-    print("sum of digits of n:", sumofdigits(int(a_)))
+    a_n = input()
+    print("sum of digits of n_a:", sumofdigits(int(a_n)))
 
 if __name__ == "__main__":
     main()
