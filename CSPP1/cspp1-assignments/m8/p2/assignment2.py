@@ -15,16 +15,15 @@ def sumofdigits(n_a):
     sum_digit = 0
     if n_a == 0:
         return sum_digit
-    else:
-        rem_r = n_a % 10
-        sum_digit += rem_r
-        n_a = n_a//10
+    rem_r = n_a % 10
+    sum_digit += rem_r
+    n_a = n_a//10
     return sum_digit + sumofdigits(n_a)
 
 def main():
     """print the output we get from above function"""
     a_n = input()
-    print("sum of digits of n_a:", sumofdigits(int(a_n)))
+    print(sumofdigits(int(a_n)))
 
 if __name__ == "__main__":
     main()
