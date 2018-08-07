@@ -11,10 +11,16 @@ def gcdRecur(a, b):
     returns: a positive integer, the greatest common divisor of a & b.
     '''
     # Your code here
-    if(b%a==0):
+    if (a == 0 or b == 0):
+        False
+    # base case
+    if (a == b):
         return a
-    else:
-        return gcdRecur(b,a%b)
+ 
+    # a is greater
+    if (a > b):
+        return gcdRecur(a-b, b)
+    return gcdRecur(a, b-a)
 
 def main():
     data = input()
