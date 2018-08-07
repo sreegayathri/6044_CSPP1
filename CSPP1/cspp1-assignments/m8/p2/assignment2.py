@@ -23,7 +23,7 @@ def sumofdigits(n_):
 
 def main():
     a_ = input()
-    print(sumofdigits(int(a_)))
+    print("sum of digits of n:", sumofdigits(int(a_)))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
