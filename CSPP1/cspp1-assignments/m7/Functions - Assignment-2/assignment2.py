@@ -31,18 +31,17 @@ def paydebt_offinyr(balance, annual_irate):
     #calculate the monthly intrest @ and unpaid balance
     #updated bal each month"""
     perv_bal = balance
-    minifixed_montlypay = 10
+    minifixed_montlypay = 0
     if balance <= 0:
         return 0
     while balance > 0:
+        minifixed_montlypay += 10
         balance = perv_bal
         monthly_irate = annual_irate/12
         for _ in range(12):
             monthly_unpbal = balance - minifixed_montlypay
             uptdbal_eachmon = monthly_unpbal + (monthly_irate * monthly_unpbal)
             balance = uptdbal_eachmon
-        minifixed_montlypay += 10
-    minifixed_montlypay -= 10
     return round(minifixed_montlypay, 2)
 def main():
     """call the paydebt_offinyr function here"""
