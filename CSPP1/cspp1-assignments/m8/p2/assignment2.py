@@ -22,6 +22,7 @@ def sumofdigits(n_a):
     return sum_digit + sumofdigits(n_a)
 
 def main():
+    """print the output we get from above function"""
     a_n = input()
     print("sum of digits of n_a:", sumofdigits(int(a_n)))
 
