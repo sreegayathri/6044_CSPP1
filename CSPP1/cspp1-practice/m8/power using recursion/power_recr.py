@@ -16,8 +16,6 @@ def recurPower(base, exp):
         return base
     else:
         return base*recurPower(base, exp-1)
-
-
 def main():
     data = input()
     data = data.split()
