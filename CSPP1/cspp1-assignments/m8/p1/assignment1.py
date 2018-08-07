@@ -17,7 +17,7 @@ def factorial(n_a):
 def main():
     """print the factorial of given number"""
     a_n = input()
-    print(factorial(int(a_n)))    
+    print(factorial(int(a_n)))
 
 if __name__ == "__main__":
     main()
