@@ -9,17 +9,25 @@ secret_word are in letters_guessed) and False otherwise.
 
 def is_word_guessed(secret_word, letters_guessed):
     '''
-    secret_word: string, the word the user is guessing
-    letters_guessed: list, what letters have been guessed so far
-    returns: boolean, True if all the letters of secret_word are in letters_guessed;
+    :param secret_word: string, the word the user is guessing
+    :param letters_guessed: list, what letters have been guessed so far
+    :return: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE...
-    pass
+    count = 0
+    for char in secret_word:
+        if char in letters_guessed:
+            count += 1
+    if len(secret_word) == count:
+        return True
+    else:
+        return False
 
 def main():
     '''
-    Main function for the program
+    Main function for the program is taking the
+    conditions to implement the data for required
+    output from is_word_guessed function
     '''
     user_input = input()
     if user_input:
