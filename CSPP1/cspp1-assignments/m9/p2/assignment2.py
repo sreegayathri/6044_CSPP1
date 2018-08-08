@@ -7,13 +7,20 @@ letters in letters_guessed are in secret_word. This shouldn't be too different f
 '''
 def get_guessed_word(secret_word, letters_guessed):
     '''
-    secret_word: string, the word the user is guessing
-    letters_guessed: list, what letters have been guessed so far
-    returns: string, comprised of letters and underscores that represents
+    :param secret_word: string, the word the user is guessing
+    
+    :param letters_guessed: list, what letters have been guessed so far
+    :returns: string, comprised of letters and underscores that represents
       what letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE...
-    pass
+    r_a = []
+    temp = '_'
+    for char in secret_word:
+        if char in letters_guessed:
+            r_a.append(char)
+        else:
+            r_a.append(temp)
+    return ''.join(r_a)
 
 def main():
     '''
