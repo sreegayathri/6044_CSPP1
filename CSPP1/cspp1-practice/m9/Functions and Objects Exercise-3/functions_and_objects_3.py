@@ -3,12 +3,18 @@
 
 
 def apply_to_each(L, f):
+    """:param L the list of elements
+    #:param f is the function that takes L elements to give the required o/p
+    #:return int type"""
     for i in range(len(L)):
         L[i] = f(L[i])
     return L
 def square(L):
+    """takes the return value from apply_to_each"""
     return L*L
 def main():
+    """using the condition from above and input here 
+    print"""
     data = input()
     data = data.split()
     list1 = []
