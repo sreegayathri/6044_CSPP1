@@ -30,7 +30,5 @@ def main():
     data = input()
     data = data.split()
     print(isIn((data[0][0]), data[1]))
-
-
 if __name__ == "__main__":
     main()
