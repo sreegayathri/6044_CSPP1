@@ -7,8 +7,7 @@ letters in letters_guessed are in secret_word. This shouldn't be too different f
 '''
 def get_guessed_word(secret_word, letters_guessed):
     '''
-    :param secret_word: string, the word the user is guessing
-    
+    :param secret_word: string, the word the user is guessing    
     :param letters_guessed: list, what letters have been guessed so far
     :returns: string, comprised of letters and underscores that represents
       what letters in secret_word have been guessed so far.
