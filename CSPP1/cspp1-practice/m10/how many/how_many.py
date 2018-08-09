@@ -5,8 +5,8 @@
 
 def how_many(a_dict):
     '''
-    a_dict: A dictionary, where all the values are lists.
-    returns: int, how many values are in the dictionary.
+    :param a_dict: A dictionary, where all the values are lists.
+    :returns: int, how many values are in the dictionary.
     '''
     sum_a = 0
     for i in a_dict:
