@@ -6,7 +6,7 @@ definition here, be sure you've passed the appropriate
 tests in test_ps4a.py.
 """
 
-def updateHand(hand, word):
+def update_hand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -34,7 +34,7 @@ def main():
         list_a = data.split()
         adict_a[list_a[0]] = int(list_a[1])
     data1_a = input()
-    print(updateHand(adict_a, data1_a))
+    print(update_hand(adict_a, data1_a))
 
 if __name__ == "__main__":
     main()
