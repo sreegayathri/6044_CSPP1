@@ -27,14 +27,14 @@ def updateHand(hand, word):
     return temp_dictionary
 
 def main():
-    n=input()
-    adict={}
-    for i in range(int(n)):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    data1=input()
-    print(updateHand(adict,data1))
+    n_a = input()
+    adict_a = {}
+    for _ in range(int(n_a)):
+        data_a=input()
+        list_a=data.split()
+        adict_a[list_a[0]]=int(list_a[1])
+    data1_a = input()
+    print(updateHand(adict_a, data1_a))
         
 if __name__ == "__main__":
     main()
