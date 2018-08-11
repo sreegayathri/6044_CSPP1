@@ -6,7 +6,7 @@ of lowercase letters (a word) and return the integer score for that word, using
 the game's scoring rules.
 '''
 
-def get_word_score(word, n):
+def get_word_score(word_a, n_a):
     """
     "Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is
     worth 3, D is worth 2, E is worth 1, and so on"
@@ -21,15 +21,15 @@ def get_word_score(word, n):
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
     sum_of = 0
-    for key in word:
+    for key in word_a:
         if key in SCRABBLE_LETTER_VALUES:
             list_1.append(key)
             temp = SCRABBLE_LETTER_VALUES[key]
             sum_of = sum_of + temp
-    length = len(word)
+    length = len(word_a)
     temp_2a = sum_of * length
 
-    if len(word) == 7:
+    if len(word_a) == 7:
         temp_2a = temp_2a + 50
     return temp_2a
 
