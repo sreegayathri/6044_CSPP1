@@ -29,7 +29,7 @@ def is_valid_word(word_a, hand_a, word_list):
 
     if word_a in word_list:
         for letter in word_a:
-            if (not(letter in new_dictionary)):
+            if not(letter in new_dictionary):
                 return False
             else:
                 character_number += 1
