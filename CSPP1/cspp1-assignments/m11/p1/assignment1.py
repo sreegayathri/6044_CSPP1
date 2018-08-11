@@ -30,7 +30,7 @@ def get_word_score(word, n):
     temp_2a = sum_of * length
 
     if len(word) == 7:
-        temp_2a =  temp_2a + 50
+        temp_2a = temp_2a + 50
     return temp_2a
 
 
