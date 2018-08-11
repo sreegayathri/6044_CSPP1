@@ -46,7 +46,7 @@ def is_valid_word(word_a, hand_a, word_list):
 def main():
     word_a = input()
     n_a = int(input())
-    adict = {}
+    adict_a = {}
     for i in range(n_a):
         data_a = input()
         list_a = data_a.split()
