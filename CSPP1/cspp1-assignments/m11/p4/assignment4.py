@@ -6,18 +6,18 @@ First, though, you'll need to implement the helper
 calculateHandlen function, which can be done in under five lines of code.
 """
 
-def calculateHandlen(hand):
+def calculate_hand_len(hand):
     """ 
     :parama hand= dictionary (string int)
     :returns: integer
     """
-    temp = ""
-    lengthofhand = 0
+    temp_a = ""
+    length_of_hand = 0
     for letter in hand.keys():
         for count in range(hand[letter]):
-            temp = temp + letter
-    lengthofhand = len(temp)
-    return lengthofhand 
+            temp_a = temp_a + letter
+    length_of_hand = len(temp_a)
+    return length_of_hand 
     
 
 def main():
