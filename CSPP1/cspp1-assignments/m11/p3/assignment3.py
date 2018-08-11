@@ -31,15 +31,15 @@ def is_valid_word(word_a, hand_a, word_list):
         for letter in word_a:
             if (not(letter in new_dictionary)):
                 return False
-            # else:
+            else:
                 character_number += 1
                 new_dictionary[letter] -= 1
                 if new_dictionary[letter] < 0:
                     return False
         if character_number == len(word_a):
             return True
-    # else:
-    #     return False
+    else:
+        return False
 
 
 
