@@ -20,7 +20,7 @@ def isValidWord(word, hand, wordList):
     """
     character_number = 0
     new_dictionary = hand.copy()
-    
+
     if word in wordList:
         for letter in word:
             if (not(letter in new_dictionary)):
