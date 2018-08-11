@@ -27,6 +27,7 @@ def update_hand(hand, word):
     return temp_dictionary
 
 def main():
+    """call update_hand into main function"""
     n_a = input()
     adict_a = {}
     for _ in range(int(n_a)):
