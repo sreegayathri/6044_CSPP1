@@ -14,7 +14,7 @@ def calculate_hand_len(hand):
     temp_a = ""
     length_of_hand = 0
     for letter in hand.keys():
-        for count in range(hand[letter]):
+        for _ in range(hand[letter]):
             temp_a = temp_a + letter
     length_of_hand = len(temp_a)
     return length_of_hand
@@ -24,7 +24,7 @@ def main():
     """call calculate_hand_len into main function"""
     n_a = input()
     adict_a = {}
-    for i in range(int(n_a)):
+    for _ in range(int(n_a)):
         data_a = input()
         list_a = data_a.split()
         adict_a[list_a[0]] = int(list_a[1])
