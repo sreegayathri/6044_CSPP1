@@ -7,7 +7,7 @@ calculateHandlen function, which can be done in under five lines of code.
 """
 
 def calculate_hand_len(hand):
-    """ 
+    """
     :parama hand= dictionary (string int)
     :returns: integer
     """
@@ -17,8 +17,8 @@ def calculate_hand_len(hand):
         for count in range(hand[letter]):
             temp_a = temp_a + letter
     length_of_hand = len(temp_a)
-    return length_of_hand 
-    
+    return length_of_hand
+
 
 def main():
     n_a = input()
@@ -28,7 +28,7 @@ def main():
         list_a = data_a.split()
         adict_a[list_a[0]] = int(list_a[1])
     print(calculate_hand_len(adict_a))
-        
+
 
 
 if __name__== "__main__":
