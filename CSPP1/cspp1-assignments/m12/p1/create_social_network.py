@@ -45,12 +45,6 @@ def create_social_network(data_):
         else:
             data_[keys] = [values]
     return data_
-"""
-    list_ = []
-    for i in range('input001.txt','r'):
-        key, value = data.split()
-        dict_.append((key, value))
-    print(dict_)"""
 
 def main():
     '''
