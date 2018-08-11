@@ -9,19 +9,25 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
-    
-    
+    temp = ""
+    length_of_hand = 0
+    for letter in hand.keys():
+        for count in range(hand[letter]):
+            temp = temp + letter
+    length_of_hand = len(temp)
+    return length_of_hand 
+   
 
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	print(calculateHandlen(adict))
-		
+    n=input()
+    adict={}
+    for i in range(int(n)):
+        data=input()
+        l=data.split()
+        adict[l[0]]=int(l[1])
+    print(calculateHandlen(adict))
+        
 
 
 if __name__== "__main__":
-	main()
+    main()
