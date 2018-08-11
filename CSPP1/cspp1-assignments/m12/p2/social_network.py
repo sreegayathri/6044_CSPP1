@@ -13,8 +13,17 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    line = input()
+    b_file = str(input())
+    data_ = {}
+    for i in range(line):
+        keys, values = i.split()
+        if keys in data_.keys():
+            if values not in data_[keys]:
+                data_[keys].append(values)
+        else:
+            data_[keys] = [values]
+    return data_
 
 def unfollow(network, arg1, arg2):
     '''
@@ -38,8 +47,7 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    del.data_[1]
 
 def main():
     '''
