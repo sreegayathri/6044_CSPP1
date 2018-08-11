@@ -26,5 +26,5 @@ def main():
         adict[list_a[0]] = int(list_a[1])
     print(calculate_hand_len(adict)
 
-if __name__ == "__main__":
+if __name__== "__main__":
     main()
