@@ -31,15 +31,15 @@ def is_valid_word(word_a, hand_a, word_list):
         for letter in word_a:
             if (not(letter in new_dictionary)):
                 return False
-            else:
-                character_number += 1
-                new_dictionary[letter] -= 1
+            # else:
+            #     character_number += 1
+            #     new_dictionary[letter] -= 1
                 if new_dictionary[letter] < 0:
                     return False
         if character_number == len(word_a):
             return True
-    else:
-        return False
+    # else:
+    #     return False
 
 
 
@@ -47,7 +47,7 @@ def main():
     word_a = input()
     n_a = int(input())
     adict_a = {}
-    for i in range(n_a):
+    for _ in range(n_a):
         data_a = input()
         list_a = data_a.split()
         adict_a[list_a[0]] = int(list_a[1])
