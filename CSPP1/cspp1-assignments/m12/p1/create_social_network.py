@@ -32,13 +32,12 @@ def create_social_network(data_):
         Empty data_onary is not None, it is a data_onary with no keys
     '''
 
-    b_file = str(input())
+    b_file = open('input001.txt', 'r')
     data_ = {}
-    for i in range(len(b_file)):
+    for i in open('input001.txt', 'r'):
         keys, values = i.split()
-        print(keys, values)
         if keys in data_.keys():
-            if int(values) not in data_[keys]:
+            if values not in data_[keys]:
                 data_[keys].append(values)
         else:
             data_[keys] = [values]
