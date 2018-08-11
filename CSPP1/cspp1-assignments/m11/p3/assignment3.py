@@ -32,8 +32,8 @@ def is_valid_word(word_a, hand_a, word_list):
             if (not(letter in new_dictionary)):
                 return False
             # else:
-            #     character_number += 1
-            #     new_dictionary[letter] -= 1
+                character_number += 1
+                new_dictionary[letter] -= 1
                 if new_dictionary[letter] < 0:
                     return False
         if character_number == len(word_a):
