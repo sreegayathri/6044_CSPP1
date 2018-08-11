@@ -7,7 +7,7 @@ Testing: Make sure the test_isValidWord tests pass. In addition, you will want t
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
-def isValidWord(word, hand, wordList):
+def is_valid_word(word_a, hand_a, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -19,10 +19,10 @@ def isValidWord(word, hand, wordList):
     wordList: list of lowercase strings
     """
     character_number = 0
-    new_dictionary = hand.copy()
+    new_dictionary = hand_a.copy()
 
-    if word in wordList:
-        for letter in word:
+    if word_a in word_list:
+        for letter in word_a:
             if (not(letter in new_dictionary)):
                 return False
             else:
@@ -30,7 +30,7 @@ def isValidWord(word, hand, wordList):
                 new_dictionary[letter] -= 1
                 if new_dictionary[letter] < 0:
                     return False
-        if character_number == len(word):
+        if character_number == len(word_a):
             return True
     else:
         return False
@@ -38,15 +38,15 @@ def isValidWord(word, hand, wordList):
 
 
 def main():
-    word=input()
-    n=int(input())
-    adict={}
-    for i in range(n):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    l2=input().split()
-    print(isValidWord(word,adict,l2))
+    word_a = input()
+    n_a = int(input())
+    adict = {}
+    for i in range(n_a):
+        data_a = input()
+        list_a = data_a.split()
+        adict_a[list_a[0]] = int(list_a[1])
+    list2_a = input().split()
+    print(is_valid_word(word_a,adict_a,list2_a))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
