@@ -18,7 +18,7 @@ def updateHand(hand, word):
     Has no side effects: does not modify hand.
 
     word: string
-    hand: dictionary (string -> int)    
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
     temp_dictionary = hand.copy()
@@ -30,11 +30,11 @@ def main():
     n_a = input()
     adict_a = {}
     for _ in range(int(n_a)):
-        data_a=input()
-        list_a=data.split()
-        adict_a[list_a[0]]=int(list_a[1])
+        data_a = input()
+        list_a = data.split()
+        adict_a[list_a[0]] = int(list_a[1])
     data1_a = input()
     print(updateHand(adict_a, data1_a))
-        
+
 if __name__ == "__main__":
     main()
