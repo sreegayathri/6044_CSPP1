@@ -52,7 +52,7 @@ def main():
         list_a = data_a.split()
         adict_a[list_a[0]] = int(list_a[1])
     list2_a = input().split()
-    print(is_valid_word(word_a,adict_a,list2_a))
+    print(is_valid_word(word_a, adict_a, list2_a))
 
 if __name__ == "__main__":
     main()
