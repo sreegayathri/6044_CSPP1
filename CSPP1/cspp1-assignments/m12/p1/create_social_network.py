@@ -31,14 +31,14 @@ def create_social_network(data_):
         Return a empty data_onary if the string format of the data is invalid
         Empty data_onary is not None, it is a data_onary with no keys
     '''
-    b_a = input()
-    line_a = read.b_a
+    line = input()
+    b_file = str(input())
     data_ = {}
-    for i in range(input())
-    keys, values = b_a.split()
-    if keys in data_.keys():
-        if values not in data_[keys]:
-            data_[keys].append(values)
+    for i in range(line):
+        keys, values = i.split()
+        if keys in data_.keys():
+            if values not in data_[keys]:
+                data_[keys].append(values)
         else:
             data_[keys] = [values]
     return data_
