@@ -4,35 +4,37 @@
 
 def create_social_network(data_):
     '''
-        The data argument passed to the function is a data_
+        The data argument passed to the function is a string
         It represents simple social network data
         In this social network data there are people following other people
 
-        Here is an example social network data data_:
+        Here is an example social network data string:
         John follows Bryant,Debra,Walter
         Bryant follows Olive,Ollie,Freda,Mercedes
         Mercedes follows Walter,Robin,Bryant
         Olive follows John,Ollie
 
-        The data_ has multiple lines and each line represents one person
+        The string has multiple lines and each line represents one person
         The first word of each line is the name of the person
         The second word is follows that separates the person from the followers
         After the second word is a list of people separated by ,
 
-        create_social_network function should split the data_ on lines
+        create_social_network function should split the string on lines
         then extract the person and the followers by splitting each line
         finally add the person and the followers to a data_onary and
         return the data_onary
 
-        Caution: watch out for trailing spaces while splitting the data_.
+        Caution: watch out for trailing spaces while splitting the string.
         It may cause your test cases to fail although your output may be right
 
         Error handling case:
-        Return a empty data_onary if the data_ format of the data is invalid
+        Return a empty data_onary if the string format of the data is invalid
         Empty data_onary is not None, it is a data_onary with no keys
     '''
     b_a = input()
+    line_a = read.b_a
     data_ = {}
+    for i in range(input())
     keys, values = b_a.split()
     if keys in data_.keys():
         if values not in data_[keys]:
@@ -45,14 +47,14 @@ def main():
     '''
         handling testcase input and printing output
     '''
-    data_ = ''
+    string = ''
     lines = int(input())
     for i in range(lines):
         i += 1
-        data_ += input()
-        data_ += '\n'
+        string += input()
+        string += '\n'
 
-    print(create_social_network(data_))
+    print(create_social_network(string))
 
 if __name__ == "__main__":
     main()
