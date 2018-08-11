@@ -21,6 +21,7 @@ def calculate_hand_len(hand):
 
 
 def main():
+    """call calculate_hand_len into main function"""
     n_a = input()
     adict_a = {}
     for i in range(int(n_a)):
@@ -31,5 +32,5 @@ def main():
 
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
