@@ -6,7 +6,6 @@ the user and the computer. Be sure you take advantage of the three helper functi
 isWordGuessed, get_guessed_word, and getAvailableLetters, 
 that you've defined in the previous part.
 '''
-
 # -----------------------------------
 # Helper code
 # You don't need to understand this helper code,
