@@ -44,6 +44,7 @@ def is_valid_word(word_a, hand_a, word_list):
 
 
 def main():
+    """call is_valid_word into main"""
     word_a = input()
     n_a = int(input())
     adict_a = {}
