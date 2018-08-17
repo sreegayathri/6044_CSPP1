@@ -13,7 +13,6 @@ def similarity(dict1, dict2, final_words):
     dictionary = {}
     for i_ in final_words:
         dictionary[i_] = [dict1.count(i_),dict2.count(i_)]
-    print(dictionary)
     for j_ in dictionary:
         temp1 += dictionary[j_][0]*dictionary[j_][1]
     for j_ in dictionary:
@@ -50,23 +49,18 @@ def main():
         if i_ in "1234567890!@#$%^&*()?~/'":
             words1.replace(i_,'')
     words1 = words1.split()# converts into list after split
-    print(words1)
     input2 = input()
     words2 = input2.lower().strip()#string
     for i_ in words2:
         if i_ in "1234567890!@#$%^&*()?~/'":
             words2.replace(i_,'')
     words2 = words2.split()# converts into list after split
-    print(words2)
 
     stopwords = load_stopwords('stopwords.txt')
     words1 =[word for word in words1 if word not in stopwords]
-    print(words1)
 
     words2 =[word for word in words2 if word not in stopwords]    
-    print(words2)
     final_words = list(set(words1).union(set(words2)))
-    print(final_words)
     print(similarity(words1, words2, final_words))
 
 if __name__ == '__main__':
