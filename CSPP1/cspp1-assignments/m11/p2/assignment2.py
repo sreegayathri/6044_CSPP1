@@ -17,9 +17,9 @@ def update_hand(hand, word):
 
     Has no side effects: does not modify hand.
 
-    word: string
-    hand: dictionary (string -> int)
-    returns: dictionary (string -> int)
+    :param word: string
+    :param hand: dictionary (string -> int)
+    :returns: dictionary (string -> int)
     """
     temp_dictionary = hand.copy()
     for character in word:

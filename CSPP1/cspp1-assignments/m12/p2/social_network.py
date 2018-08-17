@@ -13,17 +13,22 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    line = input()
-    b_file = str(input())
-    data_ = {}
-    for i in range(line):
-        keys, values = i.split()
-        if keys in data_.keys():
-            if values not in data_[keys]:
-                data_[keys].append(values)
-        else:
-            data_[keys] = [values]
-    return data_
+    # line = input()
+    # b_file = str(input())
+    # data_ = {}
+    # for i in range(line):
+    #     keys, values = i.split()
+    #     if keys in data_.keys():
+    #         if values not in data_[keys]:
+    #             data_[keys].append(values)
+    #     else:
+    #         data_[keys] = [values]
+    # return data_
+    if arg1 in network  and arg2 in network:
+        network[arg1].append(arg2)
+    else:
+        network[arg1] = [arg2]
+    return network
 
 def unfollow(network, arg1, arg2):
     '''
@@ -35,7 +40,11 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    if ar1 in network:
+        if arg2 in network[arg2]:
+            network[arg1].remove[arg2]
+    return network
+
 
 def delete_person(network, arg1):
     '''
@@ -47,7 +56,13 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-
+    if arg1 in network:
+        for person in network:
+            followers_list = network[person]
+            if arg1 in followers_list:
+                followers_list.remove(arg1)
+        del network[arg1]
+    return network
 def main():
     '''
         handling testcase input and printing output

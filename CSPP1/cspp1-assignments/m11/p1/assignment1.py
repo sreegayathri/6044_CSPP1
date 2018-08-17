@@ -24,6 +24,7 @@ def get_word_score(word_a, n_a):
     for key in word_a:
         if key in scrabble_letter_values:
             list_1.append(key)
+            
             temp = scrabble_letter_values[key]
             sum_of = sum_of + temp
     length = len(word_a)
