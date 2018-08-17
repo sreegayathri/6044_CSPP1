@@ -7,9 +7,9 @@ def similarity(dict1, dict2, final_words):
     '''
         Compute the document distance as given in the PDF
     '''
-    temp1=0
-    temp2=0
-    temp3=0
+    temp1 = 0
+    temp2 = 0
+    temp3 = 0
     dictionary = {}
     for i_ in final_words:
         dictionary[i_] = [dict1.count(i_),dict2.count(i_)]
@@ -20,14 +20,6 @@ def similarity(dict1, dict2, final_words):
     for j_ in dictionary:
         temp3 += dictionary[j_][1]**2
     return temp1/math.sqrt(temp2*temp3)
-
-    
-
-#def frequency_words(dictionary,words,index):
-    # for word in words:
-    #     if word not in dictionary: dictionary[word] = [0,0]:
-    #         dictionary[word][index] += 1
-    # return dictionary
 
 def load_stopwords(filename):
     '''
@@ -57,9 +49,9 @@ def main():
     words2 = words2.split()# converts into list after split
 
     stopwords = load_stopwords('stopwords.txt')
-    words1 =[word for word in words1 if word not in stopwords]
-
-    words2 =[word for word in words2 if word not in stopwords]    
+    words1 = [word for word in words1 if word not in stopwords]
+    words2 = [word for word in words2 if word not in stopwords]    
+    
     final_words = list(set(words1).union(set(words2)))
     print(similarity(words1, words2, final_words))
 
