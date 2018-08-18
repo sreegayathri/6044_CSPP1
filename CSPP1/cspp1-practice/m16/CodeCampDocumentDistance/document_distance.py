@@ -2,6 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import math
+import re
 
 
 def similarity(dict1, dict2, final_words):
@@ -38,15 +39,18 @@ def main():
     '''
     input1 = input()
     words1 = input1.lower()#string
-    for i_a in words1:
-        if i_a in "1234567890!@#$%^&*()?~/'":
-            words1.replace(i_a, '')
+    # for i_a in words1:
+    #     if i_a in "1234567890!@#$%^&*()?~/'":
+    #         words1.replace(i_a, '')
+    words1=re.sub(r'[^a-z\s]', '', words1)
+
     words1 = words1.split()# converts into list after split
     input2 = input()
     words2 = input2.lower().strip()#string
-    for i_a in words2:
-        if i_a in "1234567890!@#$%^&*()?~/'":
-            words2.replace(i_a, '')
+    # for i_a in words2:
+    #     if i_a in "1234567890!@#$%^&*()?~/'":
+    #         words2.replace(i_a, '')
+    words2=re.sub(r'[^a-z\s]', '', words2)
     words2 = words2.split()# converts into list after split
 
     stopwords = load_stopwords('stopwords.txt')
