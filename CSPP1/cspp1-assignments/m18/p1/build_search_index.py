@@ -56,12 +56,11 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    dict1 = {}
+
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-    for index in documents:
-        dict1[index] =  
+
         # clean up doc and tokenize to words list
 
         # add or update the words of the doc to the search index
