@@ -39,6 +39,7 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
+    documents = []
     text = documents.lower()
     for i_a in text:
         if i_a in "1234567890!@#$%^&*()?~/'":
