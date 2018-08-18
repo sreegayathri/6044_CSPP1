@@ -40,7 +40,7 @@ def word_list(text):
         return a list of words
     '''
     text = documents.lower()
-    for i_a in doctext:
+    for i_a in text:
         if i_a in "1234567890!@#$%^&*()?~/'":
             documents.replace(i_a, '')
     text = doctext.split()
