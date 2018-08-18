@@ -60,7 +60,7 @@ def build_search_index(docs):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     for i_a in documents:
-        dictionary[i_a] = [dict1.count(i_a), dict2.count(i_a)]
+        dictionary[i_a] = [docs.count(i_a), dict2.count(i_a)]
 
         # clean up doc and tokenize to words list
 
