@@ -59,8 +59,8 @@ def build_search_index(docs):
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-    for i_ in documents:
-        dictionary[i_] = [dict1.count(i_),dict2.count(i_)]
+    for i_a in documents:
+        dictionary[i_a] = [dict1.count(i_a), dict2.count(i_a)]
 
         # clean up doc and tokenize to words list
 
@@ -89,9 +89,9 @@ def main():
     # iterate for n times
     lines = int(input())
     # iterate through N times and add documents to the list
-    for i in range(lines):
+    for i_a in range(lines):
         documents.append(input())
-        i += 1
+        i_a += 1
     stopwords = load_stopwords('stopwords.txt')
     # call print to display the search index
     print(print_search_index(build_search_index(documents)))
