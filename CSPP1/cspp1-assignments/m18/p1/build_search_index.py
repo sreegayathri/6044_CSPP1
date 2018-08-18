@@ -91,6 +91,7 @@ def main():
         documents.append(input())
         i_a += 1
     stopwords = load_stopwords('stopwords.txt')
+    word1 = [word for word in lines
     # call print to display the search index
     print_search_index(build_search_index(documents))
 
