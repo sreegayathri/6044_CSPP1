@@ -2,6 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import math
+import re
 
 def similarity(dict1, dict2, final_words):
     '''
@@ -11,14 +12,14 @@ def similarity(dict1, dict2, final_words):
     temp2 = 0
     temp3 = 0
     dictionary = {}
-    for i_ in final_words:
-        dictionary[i_] = [dict1.count(i_),dict2.count(i_)]
-    for j_ in dictionary:
-        temp1 += dictionary[j_][0]*dictionary[j_][1]
-    for j_ in dictionary:
-        temp2 += dictionary[j_][0]**2
-    for j_ in dictionary:
-        temp3 += dictionary[j_][1]**2
+    for i_a in final_words:
+        dictionary[i_a] = [dict1.count(i_), dict2.count(i_)]
+    for j_a in dictionary:
+        temp1 += dictionary[j_a][0]*dictionary[j_][1]
+    for j_a in dictionary:
+        temp2 += dictionary[j_a][0]**2
+    for j_a in dictionary:
+        temp3 += dictionary[j_a][1]**2
     return temp1/math.sqrt(temp2*temp3)
 
 def load_stopwords(filename):
@@ -37,15 +38,15 @@ def main():
     '''
     input1 = input()
     words1 = input1.lower()#string
-    for i_ in words1:
-        if i_ in "1234567890!@#$%^&*()?~/'":
-            words1.replace(i_,'')
+    for i_a in words1:
+        if i_a in "1234567890!@#$%^&*()?~/'":
+            words1.replace(i_a, '')
     words1 = words1.split()# converts into list after split
     input2 = input()
     words2 = input2.lower().strip()#string
-    for i_ in words2:
-        if i_ in "1234567890!@#$%^&*()?~/'":
-            words2.replace(i_,'')
+    for i_a in words2:
+        if i_a in "1234567890!@#$%^&*()?~/'":
+            words2.replace(i_a, '')
     words2 = words2.split()# converts into list after split
 
     stopwords = load_stopwords('stopwords.txt')
