@@ -51,8 +51,8 @@ def main():
 
     stopwords = load_stopwords('stopwords.txt')
     words1 = [word for word in words1 if word not in stopwords]
-    words2 = [word for word in words2 if word not in stopwords]    
-    
+    words2 = [word for word in words2 if word not in stopwords]
+
     final_words = list(set(words1).union(set(words2)))
     print(similarity(words1, words2, final_words))
 
