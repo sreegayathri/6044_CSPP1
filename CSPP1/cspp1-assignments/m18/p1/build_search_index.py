@@ -39,7 +39,7 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    regex = re.compile[^a-z]
+    regex = re.compile(^[a-z])
     word_m = [regex.sub(for word in documents.split() for word in documents.lower(text))]
     if word in "1234567890!@#$%^&*()?~/'":
         documents.replace(i_a, '')
@@ -57,7 +57,7 @@ def build_search_index(docs):
     dict1 = {}
     words1 = []
     for word in lines:
-     
+
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
@@ -93,6 +93,7 @@ def main():
         documents.append(input())
         i_a += 1
     stopwords = load_stopwords('stopwords.txt')
+
     # call print to display the search index
     print_search_index(build_search_index(documents))
 
