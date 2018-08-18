@@ -13,9 +13,9 @@ def similarity(dict1, dict2, final_words):
     temp3 = 0
     dictionary = {}
     for i_a in final_words:
-        dictionary[i_a] = [dict1.count(i_), dict2.count(i_)]
+        dictionary[i_a] = [dict1.count(i_a), dict2.count(i_a)]
     for j_a in dictionary:
-        temp1 += dictionary[j_a][0]*dictionary[j_][1]
+        temp1 += dictionary[j_a][0]*dictionary[j_a][1]
     for j_a in dictionary:
         temp2 += dictionary[j_a][0]**2
     for j_a in dictionary:
