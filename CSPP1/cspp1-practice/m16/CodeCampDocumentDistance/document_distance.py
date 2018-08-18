@@ -39,12 +39,12 @@ def main():
     '''
     input1 = input()
     words1 = input1.lower()
-    words1=re.sub(r'[^a-z\s]', '', words1)
+    words1 = re.sub(r'[^a-z\s]', '', words1)
 
     words1 = words1.split()# converts into list after split
     input2 = input()
     words2 = input2.lower().strip()
-    words2=re.sub(r'[^a-z\s]', '', words2)
+    words2 = re.sub(r'[^a-z\s]', '', words2)
     words2 = words2.split()# converts into list after split
 
     stopwords = load_stopwords('stopwords.txt')
