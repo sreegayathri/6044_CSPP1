@@ -39,12 +39,11 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    documents = []
-    word1 = documents.lower(text)
+    word1 = lines.lower()
     for word1 in text:
         if word1 in "1234567890!@#$%^&*()?~/'":
-            documents.replace(word1, '')
-    word1 = doctext.split()
+            lines.replace(word1,'')
+    word1 = lines.split()
     print(word1)
 #    doctext = [word for word in doctext if word not in stopwords]
 
