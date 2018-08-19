@@ -7,6 +7,7 @@ VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
 HAND_SIZE = 7
 
+
 SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
@@ -44,7 +45,7 @@ def getFrequencyDict(sequence):
     for x in sequence:
         freq[x] = freq.get(x,0) + 1
     return freq
-    
+
 
 # (end of helper code)
 # ----------------------------------
@@ -116,7 +117,7 @@ def dealHand(n):
     """
     hand={}
     numVowels = n // 3
-    
+
     for i in range(numVowels):
         x = VOWELS[random.randrange(0,len(VOWELS))]
         hand[x] = hand.get(x, 0) + 1
@@ -124,7 +125,7 @@ def dealHand(n):
     for i in range(numVowels, n):    
         x = CONSONANTS[random.randrange(0,len(CONSONANTS))]
         hand[x] = hand.get(x, 0) + 1
-        
+
     return hand
 
 def updateHand(hand, word):
@@ -144,35 +145,37 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    temp_hand == dict(hand)
-    
-    
+    temp_hand = dict(hand)
+    for letter in word:
+        if letter in temp_hand:
+            temp_hand[letter] -= 1
+    return temp_hand
+
+
 def isValidWord(word, hand, wordList):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
     """
-    word_frequency = getFrequencyDict(word, hand, wordList)
+    word_frequency = getFrequencyDict(word)
     for letter in word_frequency:
-        if letter not in hand.key():
+        if letter not in hand.keys():
             return False
         else:
             if word_frequency[letter] <= hand[letter]:
-        if hand not in wordList:
-            return False
-    return True
+                if hand not in wordList:
+                    return False
+                return True
     # TO DO ... <-- Remove this comment when you code this function
 
 def calculateHandlen(hand):
     """ 
     Returns the length (number of letters) in the current hand.
-    
     hand: dictionary (string-> int)
     returns: integer
     """
@@ -199,7 +202,7 @@ def playHand(hand, wordList, n):
       hand: dictionary (string -> int)
       wordList: list of lowercase strings
       n: integer (HAND_SIZE; i.e., hand size required for additional points)
-      
+
     """
     # BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do your coding within the pseudocode (leaving those comments in-place!)
     # Keep track of the total score
@@ -215,11 +218,11 @@ def playHand(hand, wordList, n):
             break
             # End the game (break out of the loop)
         else:
-            
+
         # Otherwise (the input is not a single period):
-        
+
             # If the word is not valid:
-            if not isValidWord(user_word, hand, wordList):
+            if not isValidWord(word, hand, wordList):
                 print("invalid word")
                 print()
                 # Reject invalid word (print a message followed by a blank line)
@@ -237,7 +240,7 @@ def playHand(hand, wordList, n):
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
 
-def playGame(wordList):
+def playGame(wordlist):
     """
     Allow the user to play an arbitrary number of hands.
 
@@ -246,23 +249,23 @@ def playGame(wordList):
       * If the user inputs 'r', let the user play the last hand again.
       * If the user inputs 'e', exit the game.
       * If the user inputs anything else, tell them their input was invalid.
- 
+
     2) When done playing the hand, repeat from step 1    
     """
     hand = {}
     while True:
-    userinput = input("enter 'n' | enter 'r' | enter ' e':")
-    if userinput =='n':
-        hand = dealHand(HAND_SIZE)
-        playHand(hand,wordlist,HAND_SIZE)
-    elif userinput == 'r':
-        pass
-    elif userinput == 'e':
-        return
-    else:
-        print("your input is valid")
+        userinput = input("enter 'n' | enter 'r' | enter ' e':")
+        if userinput =='n':
+            hand = dealHand(HAND_SIZE)
+            playHand(hand,wordlist,HAND_SIZE)
+        elif userinput == 'r':
+            playHand(hand,wordlist,HAND_SIZE)
+        elif userinput == 'e':
+            return
+        else:
+            print("your input is valid")
     # TO DO ... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this line when you code the function
+    #print("playGame not yet implemented.") # <-- Remove this line when you code the function
 
 if __name__ == '__main__':
     wordList = loadWords()
