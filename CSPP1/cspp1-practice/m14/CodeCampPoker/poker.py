@@ -19,7 +19,7 @@ def is_straight(hand):
     for i in hand:
         face_values.append(VAL_DICT[i[0]])
     face_values.sort()
-    for k in range(len(face_values)-1):
+    for k in range(len(face_values)+1):
         if face_values[k+1]-face_values[k] != 1:
             return False
     return True
