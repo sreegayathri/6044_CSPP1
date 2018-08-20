@@ -26,7 +26,7 @@ def is_four_of_akind(hand):
         return True
     return False
 
-def full_house(hand):
+def is_full_house(hand):
     hand_list = []
     for i in hand:
         hand_list.append(i[0])
