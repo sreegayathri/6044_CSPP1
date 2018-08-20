@@ -95,7 +95,7 @@ def is_two_pair(hand):
     for card in hand:
         check_hand.append(card[0])
     if max(freq_dict) >= 2:
-        if sorted(check_hand.values())==[1,2,2]:
+        if sorted(check_hand.values())==[1, 2, 2]:
             for key in freq_dict:
                 if freq_dict[key] == 2:
                     return True
