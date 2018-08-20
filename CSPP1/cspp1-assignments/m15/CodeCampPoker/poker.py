@@ -87,7 +87,7 @@ def is_three_of_akind(hand):
     return False
 
 def is_two_pair(hand):
-        """ to check if atleast 2 pair of cards are of a kind present or not"""
+    """ to check if atleast 2 pair of cards are of a kind present or not"""
     check_hand2 = []
     for card in hand:
         check_hand2.append(card[0])
