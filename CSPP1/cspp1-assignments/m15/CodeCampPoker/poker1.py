@@ -116,6 +116,7 @@ def is_one_pair(hand):
     for num_freq in check_hand:
         if check_hand.count(num_freq) == 2:
             freq_dict.append(num_freq)
+            print(freq_dict)
     if max(freq_dict) >= 1:
         for key in freq_dict:
             if freq_dict[key] == 1:
