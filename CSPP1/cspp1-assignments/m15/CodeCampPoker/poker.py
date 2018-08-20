@@ -12,7 +12,7 @@ def is_four_of_akind(hand):
     '''
     to check if hand it is a four of a kind or not and sends the true or false
     '''
-    
+
     check_hand = []
     freq_dict = []
     for card in hand:
@@ -24,6 +24,7 @@ def is_four_of_akind(hand):
     return False
 
 def is_full_house(hand):
+    """to check any hand scored a full house"""
     check_full_house = []
     freq_dict_house = []
     for card in hand:
@@ -74,6 +75,7 @@ def is_straight(hand):
     return True
 
 def is_three_of_akind(hand):
+    """ to check if atleast 3 cards are of a kind """
     check_hand3 = []
     freq_dict3 = []
     for card in hand:
@@ -85,6 +87,7 @@ def is_three_of_akind(hand):
     return False
 
 def is_two_pair(hand):
+        """ to check if atleast 2 pair of cards are of a kind present or not"""
     check_hand2 = []
     for card in hand:
         check_hand2.append(card[0])
