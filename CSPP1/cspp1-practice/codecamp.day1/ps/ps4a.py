@@ -16,20 +16,20 @@ SCRABBLE_LETTER_VALUES = {
 # Helper code
 # (you don't need to understand this helper code)
 
-WORDLIST_FILENAME = "words.txt"
+word_list_FILENAME = "words.txt"
 def loadWords():
     """Returns a list of valid words. Words are strings of lowercase letters.
     Depending on the size of the word list, this function may
     take a while to finish."""
     print("Loading word list from file...")
     # inFile: file
-    inFile = open(WORDLIST_FILENAME, 'r')
-    # wordList: list of strings
-    wordList = []
+    inFile = open(word_list_FILENAME, 'r')
+    # word_list: list of strings
+    word_list = []
     for line in inFile:
-        wordList.append(line.strip().lower())
-    print("  ", len(wordList), "words loaded.")
-    return wordList
+        word_list.append(line.strip().lower())
+    print("  ", len(word_list), "words loaded.")
+    return word_list
 
 def getFrequencyDict(sequence):
     """
@@ -152,15 +152,15 @@ def updateHand(hand, word):
     return temp_hand
 
 
-def isValidWord(word, hand, wordList):
+def isValidWord(word, hand, word_list):
     """
-    Returns True if word is in the wordList and is entirely
+    Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
 
-    Does not mutate hand or wordList.
+    Does not mutate hand or word_list.
     word: string
     hand: dictionary (string -> int)
-    wordList: list of lowercase strings
+    word_list: list of lowercase strings
     """
     word_frequency = getFrequencyDict(word)
     for letter in word_frequency:
@@ -168,7 +168,7 @@ def isValidWord(word, hand, wordList):
             return False
         else:
             if word_frequency[letter] <= hand[letter]:
-                if hand not in wordList:
+                if hand not in word_list:
                     return False
                 return True
     # TO DO ... <-- Remove this comment when you code this function
@@ -182,7 +182,7 @@ def calculateHandlen(hand):
     # TO DO... <-- Remove this comment when you code this function
     return sum(hand.values())
 
-def playHand(hand, wordList, n):
+def playHand(hand, word_list, n):
     """
     Allows the user to play the given hand, as follows:
 
@@ -200,7 +200,7 @@ def playHand(hand, wordList, n):
       inputs a "."
 
       hand: dictionary (string -> int)
-      wordList: list of lowercase strings
+      word_list: list of lowercase strings
       n: integer (HAND_SIZE; i.e., hand size required for additional points)
 
     """
@@ -218,15 +218,12 @@ def playHand(hand, wordList, n):
             break
             # End the game (break out of the loop)
         else:
-
         # Otherwise (the input is not a single period):
 
             # If the word is not valid:
-            if not isValidWord(word, hand, wordList):
+            if not isValidWord(word, hand, word_list):
                 print("invalid word")
-                print()
                 # Reject invalid word (print a message followed by a blank line)
-
             # Otherwise (the word is valid):
             else:
                 wordscore =getWordScore(user_word,HAND_SIZE)
@@ -236,11 +233,10 @@ def playHand(hand, wordList, n):
                 total_score += wordscore
                 hand = updateHand(hand,user_word)
     print("total_score: ", total_score)
-
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
 
-def playGame(wordlist):
+def playGame(word_list):
     """
     Allow the user to play an arbitrary number of hands.
 
@@ -257,9 +253,9 @@ def playGame(wordlist):
         userinput = input("enter 'n' | enter 'r' | enter ' e':")
         if userinput =='n':
             hand = dealHand(HAND_SIZE)
-            playHand(hand,wordlist,HAND_SIZE)
+            playHand(hand,word_list,HAND_SIZE)
         elif userinput == 'r':
-            playHand(hand,wordlist,HAND_SIZE)
+            playHand(hand,word_list,HAND_SIZE)
         elif userinput == 'e':
             return
         else:
@@ -268,5 +264,5 @@ def playGame(wordlist):
     #print("playGame not yet implemented.") # <-- Remove this line when you code the function
 
 if __name__ == '__main__':
-    wordList = loadWords()
-    playGame(wordList)
+    word_list = loadWords()
+    playGame(word_list)
