@@ -92,8 +92,11 @@ def is_three_of_akind(hand):
 def is_two_pair(hand):
     """ to check if atleast 2 pair of cards are of a kind present or not"""
     check_hand = []
+    freq_dict = []
     for card in hand:
         check_hand.append(card[0])
+    for number_count2 in check_hand:
+        freq_dict.append(check_hand.count(number_count2))
     if max(freq_dict) >= 2:
         if sorted(check_hand.values()) == [1, 2, 2]:
             for key in freq_dict:
