@@ -11,33 +11,6 @@ def is_straight_and_flush(hand):
         return True
     return False
 
-def is_four_of_akind(hand):
-    '''
-    to check if hand it is a four of a kind or not and sends the true or false
-    '''
-    
-    check_hand = []
-    freq_dict = []
-    for card in hand:
-        check_hand.append(card[0])
-    for number_count in check_hand:
-        freq_dict.append(check_hand.count(number_count))
-    if max(freq_dict) >= 4:
-        return True
-    return False
-
-def is_full_house(hand):
-    check_full_house = []
-    freq_dict_house = []
-    for card in hand:
-        check_full_house.append(card[0])
-    for dani in check_full_house:
-        freq_dict_house.append(check_full_house.count(dani))
-    sorted(freq_dict_house)
-    if freq_dict_house == [2, 3]:
-        return True
-    return False
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -76,54 +49,6 @@ def is_straight(hand):
             return False
     return True
 
-def is_three_of_akind(hand):
-    check_hand3 = []
-    freq_dict3 = []
-    for card in hand:
-        check_hand3.append(card[0])
-    for number_count3 in check_hand3:
-        freq_dict3.append(check_hand3.count(number_count3))
-    if max(freq_dict3) == 3:
-        return True
-    return False
-
-def is_two_pair():
-    check_hand2 = []
-    for card in hand:
-        check_hand2.append(card[0])
-    if len(set(check_hand2)) == 3:
-        return True
-    return False
-
-def is_one_pair(hand):
-    '''
-    if input set of cards contains only pairs of cards
-    with same facevalue
-    output id true
-    '''
-    check_hand1 = []
-    freq_dict1 = []
-    for card in hand:
-        check_hand1.append(card[0])
-    for num_freq in check_hand1:
-        if check_hand1.count(num_freq) == 2:
-            freq_dict1.append(num_freq)
-    if len(freq_dict1) == 0:
-        return False
-    return True
-
-def is_high_card(hand):
-    '''
-    returns the hand with high card value
-    '''
-    check_high = []
-    for card in hand:
-        if card[0] in ['J', 'K', 'Q', 'A', 'T']:
-            check_high.append(VAL_DICT[card[0]]/int(10))
-        else:
-            check_high.append(int(card[0])/int(10))
-    return max(check_high)/100
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -149,22 +74,12 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_flush(hand) and is_straight(hand):
-        return 9
-    elif is_four_of_akind(hand):
-        return 8
-    elif is_full_house(hand):
-        return 7
-    elif is_straight(hand):
-        return 5
-    elif is_flush(hand):
-        return 6
-    elif is_three_of_akind(hand):
-        return 4
-    elif is_two_pair(hand):
         return 3
-    elif is_one_pair(hand):
+    elif is_flush(hand):
+        return 2
+    elif is_straight(hand):
         return 1
-    return is_high_card(hand)
+    return 0
 
 def poker(hands):
     '''
