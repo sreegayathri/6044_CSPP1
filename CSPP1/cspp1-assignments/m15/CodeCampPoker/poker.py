@@ -6,10 +6,7 @@
 VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
     '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 
-def is_straight_and_flush(hand):
-    if is_straight and is_flush:
-        return True
-    return False
+
 
 def is_four_of_akind(hand):
     '''
@@ -71,7 +68,7 @@ def is_straight(hand):
     for i in hand:
         face_values.append(VAL_DICT[i[0]])
     sorted(face_values)
-    for k in range(0,len(face_values)-1,1):
+    for k in range(0, len(face_values)-1, 1):
         if max(face_values)-min(face_values) != 1:
             return False
     return True
