@@ -119,7 +119,7 @@ def is_one_pair(hand):
     if max(freq_dict) >= 1:
         for key in freq_dict:
             if freq_dict[key] == 1:
-                return key
+                return VAL_DICT[key]
 
 def is_high_card(hand):
     '''
