@@ -25,7 +25,8 @@ def is_four_of_akind(hand):
     if max(freq_dict) >= 4:
         return True
     return False
-
+def defaultdict():
+    return 0
 def is_full_house(hand):
     hand_list = []
     for i in hand:
