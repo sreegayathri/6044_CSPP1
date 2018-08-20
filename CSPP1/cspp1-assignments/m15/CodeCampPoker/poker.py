@@ -84,7 +84,7 @@ def is_three_of_akind(hand):
         return True
     return False
 
-def is_two_pair():
+def is_two_pair(hand):
     check_hand2 = []
     for card in hand:
         check_hand2.append(card[0])
