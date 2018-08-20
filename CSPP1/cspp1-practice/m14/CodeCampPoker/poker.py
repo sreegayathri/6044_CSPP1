@@ -42,6 +42,21 @@ def is_flush(hand):
     if sum_ascii == 5*ord(i):
         return True
     return False
+
+def is_four(hand):
+    '''
+    to check if hand it is a four of a kind or not and sends the true or false
+    '''
+    face_values1 = []
+    count = 0
+    for i in hand:
+        face_values1.append(VAL_DICT[i[0]])
+    face_values1.sort()
+    for k in range(len(face_values1)-1):
+        if face_values1[k+1]-face_values1[k] == 0:
+            count += 1
+    return count == 3
+
 def is_three(hand):
     '''
     check weather the given hand is three of a kind
@@ -68,19 +83,7 @@ def is_two(hand):
         if face_values3[k+1]-face_values3[k] == 0:
             count2 += 1
     return count2 == 1
-def is_four(hand):
-    '''
-    to check if hand it is a four of a kind or not and sends the true or false
-    '''
-    face_values1 = []
-    count = 0
-    for i in hand:
-        face_values1.append(VAL_DICT[i[0]])
-    face_values1.sort()
-    for k in range(len(face_values1)-1):
-        if face_values1[k+1]-face_values1[k] == 0:
-            count += 1
-    return count == 3
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to

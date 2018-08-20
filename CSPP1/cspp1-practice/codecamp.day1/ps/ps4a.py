@@ -49,10 +49,7 @@ def getFrequencyDict(sequence):
 
 # (end of helper code)
 # ----------------------------------
-
-#
 # Problem #1: Scoring a word
-#
 def getWordScore(word, n):
     """
     Returns the score for a word. Assumes the word is a valid word.
@@ -70,11 +67,11 @@ def getWordScore(word, n):
     """
     # TO DO ... <-- Remove this comment when you code this function
     sum_of = 0
-    for letter in word_a:
+    for letter in word:
         sum_of = sum_of + letter
         temp = scrabble_letter_values[letter]
         temp_2a = sum_of * length
-    if len(word_a) == 7:
+    if len(word) == 7:
         temp_2a = temp_2a + 50
     return temp_2a
 
@@ -162,15 +159,16 @@ def isValidWord(word, hand, word_list):
     hand: dictionary (string -> int)
     word_list: list of lowercase strings
     """
+    if word not in word_list:
+        return False
     word_frequency = getFrequencyDict(word)
     for letter in word_frequency:
         if letter not in hand.keys():
             return False
         else:
-            if word_frequency[letter] <= hand[letter]:
-                if hand not in word_list:
-                    return False
-                return True
+            if word_frequency[letter] > hand[letter]:
+                return False
+    return True
     # TO DO ... <-- Remove this comment when you code this function
 
 def calculateHandlen(hand):
@@ -226,12 +224,12 @@ def playHand(hand, word_list, n):
                 # Reject invalid word (print a message followed by a blank line)
             # Otherwise (the word is valid):
             else:
-                wordscore =getWordScore(user_word,HAND_SIZE)
+                wordscore =getWordScore(word,HAND_SIZE)
                 # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
                 print("word score:", wordscore)
                 # Update the hand 
                 total_score += wordscore
-                hand = updateHand(hand,user_word)
+                hand = updateHand(hand,word)
     print("total_score: ", total_score)
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
