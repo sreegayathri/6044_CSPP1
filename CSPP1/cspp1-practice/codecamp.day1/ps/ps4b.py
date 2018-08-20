@@ -58,7 +58,7 @@ def compPlayHand(hand, wordList, n):
     4)  The sum of the word scores is displayed when the hand finishes.
     5)  The hand finishes when the computer has exhausted its possible
     choices (i.e. compChooseWord returns None).
- 
+
     hand: dictionary (string -> int)
     wordList: list (string)
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
@@ -76,7 +76,7 @@ def compPlayHand(hand, wordList, n):
         if word == None:
             # End the game (break out of the loop)
             break
-            
+
         # Otherwise (the input is not a single period):
         else :
             # If the word is not valid:
@@ -95,7 +95,7 @@ def compPlayHand(hand, wordList, n):
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
     print('Total score: ' + str(totalScore) + ' points.')
 
-    
+
 #
 # Problem #6: Playing a game
 #
@@ -114,7 +114,7 @@ def playGame(wordList):
     3) Switch functionality based on the above choices:
         * If the user inputted 'n', play a new (random) hand.
         * Else, if the user inputted 'r', play the last hand again.
-      
+
         * If the user inputted 'u', let the user play the game
           with the selected hand, using playHand.
         * If the user inputted 'c', let the computer play the 
@@ -125,9 +125,26 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    
+    hand = {}
+    while True:
+        user_input1 = input("enter 'u' | enter 'c'")
+        if user_input1 == 'c':
+            compPlayHand(hand, wordList, n)
+        else:
+            while True:
+                userinput = input("enter 'n' | enter 'r' | enter ' e':")
+                if userinput =='n':
+                    hand = dealHand(HAND_SIZE)
+                    playHand(hand,word_list,HAND_SIZE)
+                elif userinput == 'r':
+                    playHand(hand,word_list,HAND_SIZE)
+                elif userinput == 'e':
+                    return
+                else:
+                    print("your input is valid")
 
-        
+
 #
 # Build data structures used for entire session and play game
 #
