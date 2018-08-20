@@ -25,16 +25,16 @@ def is_four_of_akind(hand):
     if max(freq_dict) >= 4:
         return True
     return False
-def defaultdict():
-    return 0
+
 def is_full_house(hand):
-    hand_list = []
-    for i in hand:
-        hand_list.append(i[0])
-    hand_count = defaultdict(lambda:0)
-    for v in hand_list: 
-        hand_count[v]+=1
-    if sorted(hand_count.values()) == [2,3]:
+    check_full_house = []
+    freq_dict_house = []
+    for card in hand:
+        check_full_house.append(card[0])
+    for dani in check_full_house:
+        freq_dict_house.append(check_full_house.count(dani))
+    sorted(freq_dict_house)
+    if freq_dict_house == [2, 3]:
         return True
     return False
 
