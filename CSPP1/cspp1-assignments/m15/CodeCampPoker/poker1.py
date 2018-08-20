@@ -20,10 +20,8 @@ def is_four_of_akind(hand):
     for number_count in check_hand:
         freq_dict.append(check_hand.count(number_count))
     if max(freq_dict) >= 4:
-        for key in freq_dict:
-            if freq_dict[key] == 4:
-                return key
-    # return False
+        return True
+    return False
 
 def is_full_house(hand):
     """to check any hand scored a full house"""
@@ -78,30 +76,24 @@ def is_straight(hand):
 
 def is_three_of_akind(hand):
     """ to check if atleast 3 cards are of a kind """
-    check_hand = []
-    freq_dict = []
+    check_hand3 = []
+    freq_dict3 = []
     for card in hand:
-        check_hand.append(card[0])
-    for number_count3 in check_hand:
-        freq_dict.append(check_hand.count(number_count3))
-    if max(freq_dict) >= 3:
-        for key in freq_dict:
-            if freq_dict[key] == 3:
-                return key
+        check_hand3.append(card[0])
+    for number_count3 in check_hand3:
+        freq_dict3.append(check_hand3.count(number_count3))
+    if max(freq_dict3) == 3:
+        return True
+    return False
 
 def is_two_pair(hand):
     """ to check if atleast 2 pair of cards are of a kind present or not"""
-    check_hand = []
-    freq_dict = []
+    check_hand2 = []
     for card in hand:
-        check_hand.append(card[0])
-    for number_count2 in check_hand:
-        freq_dict.append(check_hand.count(number_count2))
-    if max(freq_dict) >= 2:
-        if sorted(check_hand.values()) == [1, 2, 2]:
-            for key in freq_dict:
-                if freq_dict[key] == 2:
-                    return True
+        check_hand2.append(card[0])
+    if len(set(check_hand2)) == 3:
+        return True
+    return False
 
 def is_one_pair(hand):
     '''
@@ -109,18 +101,16 @@ def is_one_pair(hand):
     with same facevalue
     output id true
     '''
-    check_hand = []
-    freq_dict = []
+    check_hand1 = []
+    freq_dict1 = []
     for card in hand:
-        check_hand.append(card[0])
-    for num_freq in check_hand:
-        if check_hand.count(num_freq) == 2:
-            freq_dict.append(num_freq)
-            print(freq_dict)
-    if max(freq_dict) >= 1:
-        for key in freq_dict:
-            if freq_dict[key] == 1:
-                return VAL_DICT[key]
+        check_hand1.append(card[0])
+    for num_freq in check_hand1:
+        if check_hand1.count(num_freq) == 2:
+            freq_dict1.append(num_freq)
+    if len(freq_dict1) == 0:
+        return False
+    return True
 
 def is_high_card(hand):
     '''
