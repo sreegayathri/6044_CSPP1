@@ -5,24 +5,37 @@
 '''
 VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
     '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-def is_straight(hand):
+
+def is_straight_and_flush(hand):
+    if is_straight and is_flush:
+        return True
+    return False
+
+def is_four_of_akind(hand):
     '''
-        How do we find out if the given hand is a straight?
-        The hand has a list of cards represented as strings.
-        There are multiple ways of checking if the hand is a straight.
-        Do we need both the characters in the string? No.
-        The first character is good enough to determine a straight
-        Think of an algorithm: given the card face value how to check if it a straight
-        Write the code for it and return True if it is a straight else return False
+    to check if hand it is a four of a kind or not and sends the true or false
     '''
-    face_values = []
+    
+    check_hand = []
+    freq_dict = []
+    for card in hand:
+        check_hand.append(card[0])
+    for number_count in check_hand:
+        freq_dict.append(check_hand.count(number_count))
+    if max(freq_dict) >= 4:
+        return True
+    return False
+
+def full_house(hand):
+    hand_list = []
     for i in hand:
-        face_values.append(VAL_DICT[i[0]])
-    sorted(face_values)
-    for k in range(0,len(face_values)-1,1):
-        if max(face_values)-min(face_values) != 1:
-            return False
-    return True
+        hand_list.append(i[0])
+    hand_count = defaultdict(lambda:0)
+    for v in hand_list: 
+        hand_count[v]+=1
+    if sorted(hand_count.values()) == [2,3]:
+        return True
+    return False
 
 def is_flush(hand):
     '''
@@ -43,46 +56,72 @@ def is_flush(hand):
         return True
     return False
 
-def is_four(hand):
+def is_straight(hand):
     '''
-    to check if hand it is a four of a kind or not and sends the true or false
+        How do we find out if the given hand is a straight?
+        The hand has a list of cards represented as strings.
+        There are multiple ways of checking if the hand is a straight.
+        Do we need both the characters in the string? No.
+        The first character is good enough to determine a straight
+        Think of an algorithm: given the card face value how to check if it a straight
+        Write the code for it and return True if it is a straight else return False
     '''
-    face_values1 = []
-    count = 0
+    face_values = []
     for i in hand:
-        face_values1.append(VAL_DICT[i[0]])
-    face_values1.sort()
-    for k in range(len(face_values1)-1):
-        if face_values1[k+1]-face_values1[k] == 0:
-            count += 1
-    return count == 3
+        face_values.append(VAL_DICT[i[0]])
+    sorted(face_values)
+    for k in range(0,len(face_values)-1,1):
+        if max(face_values)-min(face_values) != 1:
+            return False
+    return True
 
-def is_three(hand):
+def is_three_of_akind(hand):
+    check_hand3 = []
+    freq_dict3 = []
+    for card in hand:
+        check_hand3.append(card[0])
+    for number_count3 in check_hand3:
+        freq_dict3.append(check_hand3.count(number_count3))
+    if max(freq_dict3) == 3:
+        return True
+    return False
+
+def is_two_pair():
+    check_hand2 = []
+    for card in hand:
+        check_hand2.append(card[0])
+    if len(set(check_hand2)) == 3:
+        return True
+    return False
+
+def is_one_pair(hand):
     '''
-    check weather the given hand is three of a kind
+    if input set of cards contains only pairs of cards
+    with same facevalue
+    output id true
     '''
-    face_values2 = []
-    count1 = 0
-    for i in hand:
-        face_values2.append(VAL_DICT[i[0]])
-    face_values2.sort()
-    for k in range(len(face_values2)-1):
-        if face_values2[k+1]-face_values2[k] == 0:
-            count1 += 1
-    return count1 == 2
-def is_two(hand):
+    check_hand1 = []
+    freq_dict1 = []
+    for card in hand:
+        check_hand1.append(card[0])
+    for num_freq in check_hand1:
+        if check_hand1.count(num_freq) == 2:
+            freq_dict1.append(num_freq)
+    if len(freq_dict1) == 0:
+        return False
+    return True
+
+def is_high_card(hand):
     '''
-    check weather the given hand is a pair
+    returns the hand with high card value
     '''
-    face_values3 = []
-    count2 = 0
-    for i in hand:
-        face_values3.append(VAL_DICT[i[0]])
-    face_values3.sort()
-    for k in range(len(face_values3)-1):
-        if face_values3[k+1]-face_values3[k] == 0:
-            count2 += 1
-    return count2 == 1
+    check_high = []
+    for card in hand:
+        if card[0] in ['J', 'K', 'Q', 'A', 'T']:
+            check_high.append(VAL_DICT[card[0]]/int(10))
+        else:
+            check_high.append(int(card[0])/int(10))
+    return max(check_high)/100
 
 def hand_rank(hand):
     '''
@@ -108,14 +147,24 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    if is_straight and is_flush(hand):
-        return 3
-    elif is_flush(hand):
-        return 2
+    if is_flush(hand) and is_straight(hand):
+        return 9
+    elif is_four_of_akind(hand):
+        return 8
+    elif is_full_house(hand):
+        return 7
     elif is_straight(hand):
+        return 5
+    elif is_flush(hand):
+        return 6
+    elif is_three_of_akind(hand):
+        return 4
+    elif is_two_pair(hand):
+        return 3
+    elif is_one_pair(hand):
         return 1
-    else:
-        return 0
+    return is_high_card(hand)
+
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
@@ -147,24 +196,3 @@ if __name__ == "__main__":
         HANDS.append(hand_a)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-"""VAL_DICT = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8,\
-    '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-#to find the hand rank
-if is_flush(hand) and is_straight(hand):
-        return 9
-    elif is_four_of_kind(hand):
-        return 8
-    elif is_full_house(hand):
-        return 7
-    elif is_straight(hand):
-        return 5
-    elif is_flush(hand):
-        return 6
-    elif is_three_of_kind(hand):
-        return 4
-    elif is_two_pair(hand):
-        return 3
-    elif is_one_pair(hand):
-        return 1
-    return is_high_card(hand)
-#"""

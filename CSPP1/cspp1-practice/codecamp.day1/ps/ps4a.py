@@ -66,16 +66,17 @@ def getWordScore(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
+    print(word)
+    length = len(word)
     sum_of = 0
     for letter in word:
-        sum_of = sum_of + letter
-        temp = scrabble_letter_values[letter]
-        temp_2a = sum_of * length
-    if len(word) == 7:
-        temp_2a = temp_2a + 50
-    return temp_2a
-
-
+        # sum_of = sum_of + letter
+        temp = SCRABBLE_LETTER_VALUES[letter]
+        sum_of = sum_of + temp
+    sum_of = sum_of * length
+    if len(word) == n:
+        sum_of = sum_of + 50
+    return sum_of
 
 
     # Problem #2: Make sure you understand how this function works and what it does!
@@ -224,7 +225,7 @@ def playHand(hand, word_list, n):
                 # Reject invalid word (print a message followed by a blank line)
             # Otherwise (the word is valid):
             else:
-                wordscore =getWordScore(word,HAND_SIZE)
+                wordscore = getWordScore(word,HAND_SIZE)
                 # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
                 print("word score:", wordscore)
                 # Update the hand 
