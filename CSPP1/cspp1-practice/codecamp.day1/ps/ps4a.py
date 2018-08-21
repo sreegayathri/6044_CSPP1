@@ -3,35 +3,37 @@
 import random
 import string
 
-VOWELS = 'aeiou'
-CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+VOWELS_S = 'aeiou'
+CONSONANTS_ = 'bcdfghjklmnpqrstvwxyz'
 HAND_SIZE = 7
 
 
 SCRABBLE_LETTER_VALUES = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
+    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4,\
+    'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3,\
+    'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
 }
 
 # -----------------------------------
 # Helper code
 # (you don't need to understand this helper code)
 
-word_list_FILENAME = "words.txt"
+word_list_filename = "words.txt"
 def loadWords():
     """Returns a list of valid words. Words are strings of lowercase letters.
     Depending on the size of the word list, this function may
     take a while to finish."""
     print("Loading word list from file...")
-    # inFile: file
-    inFile = open(word_list_FILENAME, 'r')
+    # in_file: file
+    in_file = open(word_list_filename, 'r')
     # word_list: list of strings
     word_list = []
-    for line in inFile:
+    for line in in_file:
         word_list.append(line.strip().lower())
     print("  ", len(word_list), "words loaded.")
     return word_list
 
-def getFrequencyDict(sequence):
+def get_frequency_dict(sequence):
     """
     Returns a dictionary where the keys are elements of the sequence
     and the values are integer counts, for the number of times that
@@ -41,16 +43,16 @@ def getFrequencyDict(sequence):
     return: dictionary
     """
     # freqs: dictionary (element_type -> int)
-    freq = {}
+    freq_dict = {}
     for x in sequence:
-        freq[x] = freq.get(x,0) + 1
-    return freq
+        freq_dict[x] = freq_dict.get(x,0) + 1
+    return freq_dict
 
 
 # (end of helper code)
 # ----------------------------------
 # Problem #1: Scoring a word
-def getWordScore(word, n):
+def get_word_score(word, n):
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -81,12 +83,12 @@ def getWordScore(word, n):
 
     # Problem #2: Make sure you understand how this function works and what it does!
 
-def displayHand(hand):
+def display_hand(hand):
     """
     Displays the letters currently in the hand.
 
     For example:
-    >>> displayHand({'a':1, 'x':2, 'l':3, 'e':1})
+    >>> display_hand({'a':1, 'x':2, 'l':3, 'e':1})
     Should print out something like:
        a x x l l l e
     The order of the letters is unimportant.
@@ -101,7 +103,7 @@ def displayHand(hand):
 
     # Problem #2: Make sure you understand how this function works and what it does!
 
-def dealHand(n):
+def deal_hand(n):
     """
     Returns a random hand containing n lowercase letters.
     At least n/3 the letters in the hand should be VOWELS.
@@ -114,19 +116,19 @@ def dealHand(n):
     returns: dictionary (string -> int)
     """
     hand={}
-    numVowels = n // 3
+    num_vowels = n // 3
 
-    for i in range(numVowels):
+    for i in range(num_vowels):
         x = VOWELS[random.randrange(0,len(VOWELS))]
         hand[x] = hand.get(x, 0) + 1
         
-    for i in range(numVowels, n):    
+    for i in range(num_vowels, n):    
         x = CONSONANTS[random.randrange(0,len(CONSONANTS))]
         hand[x] = hand.get(x, 0) + 1
 
     return hand
 
-def updateHand(hand, word):
+def update_hand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -150,7 +152,7 @@ def updateHand(hand, word):
     return temp_hand
 
 
-def isValidWord(word, hand, word_list):
+def is_valid_word(word, hand, word_list):
     """
     Returns True if word is in the word_list and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -162,7 +164,7 @@ def isValidWord(word, hand, word_list):
     """
     if word not in word_list:
         return False
-    word_frequency = getFrequencyDict(word)
+    word_frequency = get_frequency_dict(word)
     for letter in word_frequency:
         if letter not in hand.keys():
             return False
@@ -172,7 +174,7 @@ def isValidWord(word, hand, word_list):
     return True
     # TO DO ... <-- Remove this comment when you code this function
 
-def calculateHandlen(hand):
+def calculate_hand_len(hand):
     """ 
     Returns the length (number of letters) in the current hand.
     hand: dictionary (string-> int)
@@ -181,7 +183,7 @@ def calculateHandlen(hand):
     # TO DO... <-- Remove this comment when you code this function
     return sum(hand.values())
 
-def playHand(hand, word_list, n):
+def play_hand(hand, word_list, n):
     """
     Allows the user to play the given hand, as follows:
 
@@ -207,7 +209,7 @@ def playHand(hand, word_list, n):
     # Keep track of the total score
     total_score = 0
     # As long as there are still letters left in the hand:
-    while calculateHandlen(hand)>0:
+    while calculate_hand_len(hand)>0:
         # Display the hand
         print(hand)
         # Ask user for input
@@ -220,22 +222,22 @@ def playHand(hand, word_list, n):
         # Otherwise (the input is not a single period):
 
             # If the word is not valid:
-            if not isValidWord(word, hand, word_list):
+            if not is_valid_word(word, hand, word_list):
                 print("invalid word")
                 # Reject invalid word (print a message followed by a blank line)
             # Otherwise (the word is valid):
             else:
-                wordscore = getWordScore(word,HAND_SIZE)
+                word_score = get_word_score(word,HAND_SIZE)
                 # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
-                print("word score:", wordscore)
+                print("word score:", word_score)
                 # Update the hand 
-                total_score += wordscore
-                hand = updateHand(hand,word)
+                total_score += word_score
+                hand = update_hand(hand,word)
     print("total_score: ", total_score)
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
 
-def playGame(word_list):
+def play_game(word_list):
     """
     Allow the user to play an arbitrary number of hands.
 
@@ -249,19 +251,19 @@ def playGame(word_list):
     """
     hand = {}
     while True:
-        userinput = input("enter 'n' | enter 'r' | enter ' e':")
-        if userinput =='n':
-            hand = dealHand(HAND_SIZE)
-            playHand(hand,word_list,HAND_SIZE)
-        elif userinput == 'r':
-            playHand(hand,word_list,HAND_SIZE)
-        elif userinput == 'e':
+        user_input = input("enter 'n' | enter 'r' | enter ' e':")
+        if user_input =='n':
+            hand = deal_hand(HAND_SIZE)
+            play_hand(hand,word_list,HAND_SIZE)
+        elif user_input == 'r':
+            play_hand(hand,word_list,HAND_SIZE)
+        elif user_input == 'e':
             return
         else:
             print("your input is valid")
     # TO DO ... <-- Remove this comment when you code this function
-    #print("playGame not yet implemented.") # <-- Remove this line when you code the function
+    #print("play_game not yet implemented.") # <-- Remove this line when you code the function
 
 if __name__ == '__main__':
     word_list = loadWords()
-    playGame(word_list)
+    play_game(word_list)
