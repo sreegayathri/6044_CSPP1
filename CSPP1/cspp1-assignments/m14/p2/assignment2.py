@@ -129,6 +129,7 @@ class Message(object):
 ### Helper code End
 ### Paste your implementation of the `plaintext_message` class here
 class plaintext_message(Message):
+    """ implementation of plaintext message """
     def __init__(self, text, shift):
         '''
         Initializes a plaintext_message object
