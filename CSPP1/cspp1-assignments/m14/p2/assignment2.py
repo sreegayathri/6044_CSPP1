@@ -128,15 +128,15 @@ class Message(object):
 
 ### Helper code End
 ### Paste your implementation of the `plaintext_message` class here
-class PlaintextMessage(Message):
+class plaintext_message(Message):
     def __init__(self, text, shift):
         '''
-        Initializes a PlaintextMessage object        
+        Initializes a plaintext_message object        
         
         text (string): the message's text
         shift (integer): the shift associated with this message
 
-        A PlaintextMessage object inherits from Message and has five attributes:
+        A plaintext_message object inherits from Message and has five attributes:
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
             self.shift (integer, determined by input shift)
@@ -177,7 +177,7 @@ class PlaintextMessage(Message):
 
     def change_shift(self, shift):
         '''
-        Changes self.shift of the PlaintextMessage and updates other
+        Changes self.shift of the plaintext_message and updates other
         attributes determined by shift (ie. self.encrypting_dict and
         message_text_encrypted).
         shift (integer): the new shift that should be associated with this message.
