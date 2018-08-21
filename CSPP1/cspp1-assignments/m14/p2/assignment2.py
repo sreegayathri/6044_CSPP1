@@ -1,12 +1,12 @@
-''' Problem 2 - Plaintext_Message '''
+''' Problem 2 - PlaintextMessage '''
 # For this problem, the graders will use our implementation of the Message class,
 # so don't worry if you did not get the previous parts correct.
 
-# Plaintext_Message is a subclass of Message and has methods to encode a string
+# PlaintextMessage is a subclass of Message and has methods to encode a string
 # using a specified shift value. Our class will always create an encoded version
 # of the message, and will have methods for changing the encoding.
 
-# Implement the methods in the class Plaintext_Message according to the specifications in ps6.py.
+# Implement the methods in the class PlaintextMessage according to the specifications in ps6.py.
 # The methods you should fill in are:
 # __init__(self, text, shift): Use the parent class constructor to make your code more concise.
 # The getter method get_shift(self)
@@ -127,17 +127,17 @@ class Message(object):
         return ''.join(new_msg)
 
 ### Helper code End
-### Paste your implementation of the `Plaintext_Message` class here
-class Plaintext_Message(Message):
+### Paste your implementation of the `PlaintextMessage` class here
+class PlaintextMessage(Message):
     """ implementation of plaintext message """
     def __init__(self, text, shift):
         '''
-        Initializes a Plaintext_Message object
+        Initializes a PlaintextMessage object
 
         text (string): the message's text
         shift (integer): the shift associated with this message
 
-        A Plaintext_Message object inherits from Message and has five attributes:
+        A PlaintextMessage object inherits from Message and has five attributes:
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
             self.shift (integer, determined by input shift)
@@ -177,7 +177,7 @@ class Plaintext_Message(Message):
 
     def change_shift(self, shift):
         '''
-        Changes self.shift of the Plaintext_Message and updates other
+        Changes self.shift of the PlaintextMessage and updates other
         attributes determined by shift (ie. self.encrypting_dict and
         message_text_encrypted).
         shift (integer): the new shift that should be associated with this message.
@@ -190,7 +190,7 @@ class Plaintext_Message(Message):
 def main():
     ''' Function to handle testcases '''
     inp = input()
-    data = Plaintext_Message(inp, int(input()))
+    data = PlaintextMessage(inp, int(input()))
     print(data.get_shift())
     print(data.get_encrypting_dict())
     print(data.get_message_text_encrypted())
