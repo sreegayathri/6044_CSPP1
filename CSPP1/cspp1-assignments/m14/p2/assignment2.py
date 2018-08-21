@@ -131,8 +131,8 @@ class Message(object):
 class plaintext_message(Message):
     def __init__(self, text, shift):
         '''
-        Initializes a plaintext_message object        
-        
+        Initializes a plaintext_message object
+
         text (string): the message's text
         shift (integer): the shift associated with this message
 
