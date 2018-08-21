@@ -143,7 +143,7 @@ class Plaintext_Message(Message):
             self.shift (integer, determined by input shift)
             self.encrypting_dict (dictionary, built using shift)
             self.message_text_encrypted (string, created using shift)
-        Hint: consider using the parent class constructor so less 
+        Hint: consider using the parent class constructor so less
         code is repeated
         '''
         self.shift = shift
