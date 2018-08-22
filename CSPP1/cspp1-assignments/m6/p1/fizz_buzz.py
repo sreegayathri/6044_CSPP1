@@ -1,4 +1,4 @@
-'''
+'''# fe5142200c606f1f4e75620a559a577ab933e43c
 Write a short program that prints each number from 1 to num on a new line.
 For each multiple of 3, print "Fizz" instead of the number.
 For each multiple of 5, print "Buzz" instead of the number.
