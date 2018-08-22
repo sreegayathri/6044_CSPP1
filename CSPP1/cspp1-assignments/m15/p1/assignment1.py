@@ -58,7 +58,7 @@ def get_story_string():
 
 WORDLIST_FILENAME = 'words.txt'
 
-class Message(object):
+class Message:
     ''' Message object '''
     ### DO NOT MODIFY THIS METHOD ###
     def __init__(self, text):
@@ -73,6 +73,7 @@ class Message(object):
         '''
         self.message_text = text
         self.valid_words = load_words("words.txt")
+        self.build_shift_dict = {}
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_message_text(self):
@@ -231,6 +232,7 @@ class CiphertextMessage(Message):
         self.valid_words = load_words("words.txt")[:]
         Message.__init__(self, text)
         self.max_valid_words = 0
+        self.decrypted_message = ()
 
     def decrypt_message(self):
         '''
