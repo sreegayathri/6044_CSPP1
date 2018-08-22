@@ -43,21 +43,32 @@ class intSet(object):
 #   2. Add the appropriate method(s) so that len(s) returns the number of elements in s.
 
 # Hint: look through the Python docs to figure out what you'll need to solve this problem.
-
+    def intersect(self, other):
+        self.setD = []
+        for elements in self.vals:
+            if elements in other.vals:
+                self.setD.append(elements)
+        return self.setD
+    def __len__(self):
+        self.number = 0
+        for _ in self.vals:
+            self.number += 1
+        return self.number
+            
 
         
 def main():
     setA = intSet()
     setB = intSet()
-    data=raw_input()
-    data1=raw_input()
-    l1=data.split()
-    l2=data1.split()
+    data = input()
+    data1 = raw_input()
+    l1 = data.split()
+    l2 = data1.split()
     for i in l1:
         setA.insert(int(i))
     for j in l2:
         setB.insert(int(j))
-    print setA.intersect(setB)
+    print(setA.intersect(setB))
 
 if __name__== "__main__":
     main()
