@@ -9,9 +9,8 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num_a = int(input())
-    res_a = 0
     if num_a >= 0:
-        for i in range(1,num_a+1):
+        for i in range(1, num_a+1):
             if i % 3 == 0 and i % 5 == 0:
                 print("Fizz\nBuzz")
             elif i % 3 == 0:
