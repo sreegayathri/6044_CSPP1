@@ -260,12 +260,12 @@ class CiphertextMessage(Message):
 
 # Helper code ends
 
-    def decrypt_story():
+def decrypt_story():
     ''' Decrypt the story text using CiphertextMessage class and return the
         shift value and decrypted string in a tuple.
     '''
-        decrypted_text = CiphertextMessage(get_story_string())
-        return decrypted_text.decrypted_message()
+    decrypted_text = CiphertextMessage(get_story_string())
+    return decrypted_text.decrypted_message()
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
