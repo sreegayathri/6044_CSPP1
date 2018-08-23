@@ -59,7 +59,7 @@ def read_matrix():
     except:
         print("Error: Invalid input for the matrix")
     else:
-        for i in range[0:int(dim[0])]:
+        for i in range(0, int(dim[0])):
             values = input()
             temp = values.split(" ")
             k = []
