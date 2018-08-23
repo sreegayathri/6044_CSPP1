@@ -78,12 +78,13 @@ def read_matrix():
     return matrix
 
 def main():
+    """ main function of the matrix-operation"""
     try:
     # read matrix 1
         mx1 = read_matrix()
     # read matrix 2
         mx2 = read_matrix()
-    except:
+    except Value Error:
         print("Error: Invalid input for the matrix")
     else:
     # add matrix 1 and matrix 2
