@@ -84,7 +84,7 @@ def main():
         mx1 = read_matrix()
     # read matrix 2
         mx2 = read_matrix()
-    except Value Error:
+    except ValueError:
         print("Error: Invalid input for the matrix")
     else:
     # add matrix 1 and matrix 2
