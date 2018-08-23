@@ -36,8 +36,8 @@ def add_matrix(m1, m2):
         add1 = []
         for i in range(len(m1)):
             temp_sum = []
-            for j in range(len(m1[0])):
-                sum_matrix += m2[i][j]
+            for j in range(len(m1[0])-1):
+                sum_matrix = m1[i][j] + m2[i][j]
                 temp_sum.append(sum_matrix)
             add1.append(temp_sum)
     return add1
