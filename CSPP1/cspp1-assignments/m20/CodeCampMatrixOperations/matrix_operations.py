@@ -9,16 +9,15 @@ def mult_matrix(m1, m2):
     if len(m1[0]) != len(m2) or len(m1) != len(m2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
-    else:
-        multiply = []
-        for i in range(len(m1)):
-            temp_mul = []
-            for j in range(len(m2[0])):
-                res = 0
-                for k in range(len(m1[0])):
-                    res += m1[i][k]*m2[k][j]
-                temp_mul.append(res)
-            multiply.append(temp_mul)
+    multiply = []
+    for i in range(len(m1)):
+        temp_mul = []
+        for j in range(len(m2[0])):
+            res = 0
+            for k in range(len(m1[0])):
+                res += m1[i][k]*m2[k][j]
+            temp_mul.append(res)
+        multiply.append(temp_mul)
     return multiply
 
 def add_matrix(m1, m2):
@@ -32,14 +31,13 @@ def add_matrix(m1, m2):
     if len(m1) != len(m2) or len(m1[0]) != len(m2[0]):
         print("Error: Matrix shapes invalid for addition")
         return None
-    else:
-        add_mx = []
-        for i in range(len(m1)):
-            temp_sum = []
-            for j in range(len(m1[0])):
-                sum_matrix = m1[i][j] + m2[i][j]
-                temp_sum.append(sum_matrix)
-            add_mx.append(temp_sum)
+    add_mx = []
+    for i in range(len(m1)):
+        temp_sum = []
+        for j in range(len(m1[0])):
+            sum_matrix = m1[i][j] + m2[i][j]
+            temp_sum.append(sum_matrix)
+        add_mx.append(temp_sum)
     return add_mx
 
     #return add_matrix
