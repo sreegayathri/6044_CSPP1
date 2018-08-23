@@ -8,7 +8,7 @@ def mult_matrix(m1, m2):
     '''
     if len(m1[0]) != len(m2) and len(m1) != len(m2[0]):
         print("Error: Matrix shapes invalid for mult")
-        # return None
+    return None
     multiply = []
     for i in range(len(m1)):
         temp_mul = []
@@ -18,6 +18,7 @@ def mult_matrix(m1, m2):
                 res += m1[i][k]*m2[k][j]
             temp_mul.append(res)
         multiply.append(temp_mul)
+    print(multiply)
 
 def add_matrix(m1, m2):
     '''
@@ -29,7 +30,7 @@ def add_matrix(m1, m2):
     '''
     if len(m1) != len(m2) & len(m1[0]) != len(m2[0]):
         print("Error: Matrix shapes invalid for addition")
-        # return None
+    return None
     add1 = []
     for i in range(len(m1)):
         temp_sum = []
@@ -37,6 +38,7 @@ def add_matrix(m1, m2):
             sum_matrix = m1[i][j] + m2[i][j]
             temp_sum.append(sum_matrix)
         add1.append(temp_sum)
+    print(add1)
 
     #return add_matrix
 
