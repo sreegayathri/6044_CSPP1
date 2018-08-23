@@ -51,15 +51,19 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    dim = input().split(',')
     matrix = []
-    for i in range(0, int(dim[0]), 1):
-        values = input()
-        temp = values.split(" ")
-        k = []
-        for j in temp:
-            k.append(int(j))
-        matrix.append(k)
+    try:
+        dim = input().split(',')
+    except:
+        print("Error: Invalid input for the matrix")
+    else
+        for i in range(0, int(dim[0]), 1):
+            values = input()
+            temp = values.split(" ")
+            k = []
+            for j in temp:
+                k.append(int(j))
+            matrix.append(k)
     # print(m1)
     # dim2 =input().split(',')
     # for i in range(0, int(dim2[0]),1):
