@@ -60,7 +60,6 @@ def read_matrix():
         for j in temp:
             k.append(int(j))
         matrix.append(k)
-    print(matrix)
     # print(m1)
     # dim2 =input().split(',')
     # for i in range(0, int(dim2[0]),1):
