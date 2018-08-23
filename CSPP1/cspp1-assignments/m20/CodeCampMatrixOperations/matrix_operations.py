@@ -33,14 +33,14 @@ def add_matrix(m1, m2):
         print("Error: Matrix shapes invalid for addition")
         return None
     else:
-        add1 = []
+        add_mx = []
         for i in range(len(m1)):
             temp_sum = []
             for j in range(len(m1[0])):
                 sum_matrix = m1[i][j] + m2[i][j]
                 temp_sum.append(sum_matrix)
-            add1.append(temp_sum)
-    return add1
+            add_mx.append(temp_sum)
+    return add_mx
 
     #return add_matrix
 
@@ -59,13 +59,13 @@ def read_matrix():
     except:
         print("Error: Invalid input for the matrix")
     else:
-        for i in range(0, int(dim[0])):
+        for _ in range(0, int(dim[0])):
             values = input()
             temp = values.split(" ")
-            k = []
-            for j in temp:
-                k.append(int(j))
-            matrix.append(k)
+            k_temp = []
+            for j_index in temp:
+                k_temp.append(int(j_index))
+            matrix.append(k_temp)
     # print(m1)
     # dim2 =input().split(',')
     # for i in range(0, int(dim2[0]),1):
