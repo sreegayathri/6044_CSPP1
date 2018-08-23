@@ -55,7 +55,7 @@ def read_matrix():
     matrix = []
     try:
         dim = input().split(',')
-    except:
+    except TypeError:
         print("Error: Invalid input for the matrix")
     else:
         for _ in range(0, int(dim[0]), 1):
