@@ -18,7 +18,7 @@ def mult_matrix(m1, m2):
                 res += m1[i][k]*m2[k][j]
             temp_mul.append(res)
         multiply.append(temp_mul)
-    print(multiply)
+    return multiply
 
 def add_matrix(m1, m2):
     '''
@@ -38,7 +38,7 @@ def add_matrix(m1, m2):
             sum_matrix = m1[i][j] + m2[i][j]
             temp_sum.append(sum_matrix)
         add1.append(temp_sum)
-    print(add1)
+    return add1
 
     #return add_matrix
 
