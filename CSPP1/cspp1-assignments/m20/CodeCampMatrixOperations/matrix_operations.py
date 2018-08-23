@@ -73,14 +73,20 @@ def read_matrix():
     return matrix   
 
 def main():
+    try:
     # read matrix 1
     mx1 = read_matrix()
     # read matrix 2
     mx2 = read_matrix()
+    except:
+        print("Error: Invalid input for the matrix")
+    else:
     # add matrix 1 and matrix 2
     addtion_x = add_matrix(mx1, mx2)
+    print(addtion_x)
     # multiply matrix 1 and matrix 2
     multiply_matrix = mult_matrix(mx1, mx2)
+    print(multiply_matrix)
 
 if __name__ == '__main__':
     main()
