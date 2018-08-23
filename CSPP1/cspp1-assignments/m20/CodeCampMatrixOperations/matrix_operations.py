@@ -16,6 +16,7 @@ def mult_matrix(m1, m2):
             res = 0
             for k in range(len(m1[0])):
                 res += m1[i][k]*m2[k][j]
+            temp_mul.append(res)
         multiply.append(temp_mul)
     print(multiply)
 
