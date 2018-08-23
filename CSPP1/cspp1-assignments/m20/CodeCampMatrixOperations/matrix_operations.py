@@ -6,7 +6,7 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if len(m1[0]) != len(m2) and len(m1) != len(m2[0]):
+    if len(m1[0]) != len(m2) or len(m1) != len(m2[0]):
         print("Error: Matrix shapes invalid for mult")
         return None
     multiply = []
