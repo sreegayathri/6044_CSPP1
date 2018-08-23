@@ -58,3 +58,29 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""   my_dict = {}
+    values = data.split()
+    j = 2
+    if values[1] != 'follows':
+        return my_dict
+    for iterate in range(0, lines):
+        my_dict[values[iterate*3]] = values[j].split(',')
+        j += 3
+    return my_dict
+def main():
+    '''
+        handling testcase input and printing output
+        problem is to create a dictionary with given data
+        params : number of lines and data
+        output : will be in a dictionary form based on data given
+    '''
+    string = ''
+    lines = int(input())
+    for i in range(lines):
+        i += 1
+        string += input()
+        string += '\n'
+    print(create_social_network(string, lines))
+if __name__ == "__main__":
+    main()"""
