@@ -45,7 +45,7 @@ def matrix_game(matrix):
                 element_dot += 1
     if abs(element_x - element_o >= 2):
         return False
-    elif abs(element_x - element_o == 0) and element_dot > 0:
+    if abs(element_x - element_o == 0) and element_dot > 0:
         return False
     return True
 def main():
