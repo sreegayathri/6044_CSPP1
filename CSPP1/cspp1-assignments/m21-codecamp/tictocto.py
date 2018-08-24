@@ -66,25 +66,24 @@ def main():
     """ main function of the matrix-operation"""
     # read matrix
     mx = read_data()
-    tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
+    tictokto_matrix = matrix_check(mx) and matrix_game(mx)
     win = None
-    win = row_check(matrix)
+    win = row_check(mx)
     if matrix_check == True:
         if win == None:
-            win = col_check(matrix)
+            win = col_check(mx)
         if win == None:
-            win = diagonal_check(matrix)
+            win = diagonal_check(mx)
         if win == None:
             print("draw")
         else:
             print(win)
 
     else:
-        if not row_check(matrix):
+        if not row_check(mx):
             print("invalid input")
-        if  not matrix_game(matrix):
+        if  not matrix_game(mx):
             print("invalid game")
-
 
 if __name__ == '__main__':
     main()
