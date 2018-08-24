@@ -62,6 +62,7 @@ def matrix_game(matrix):
 def main():
     """ main function of the matrix-operation"""
     # read matrix
+    win = None
     matrix = []
     for i in range(0, 3, 1):
         values = input().split(' ')
@@ -71,7 +72,6 @@ def main():
         matrix.append(temp)
     #print("matrix: ",matrix)
     tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
-    win = None
     win = row_check(matrix)
     if matrix_check == True:
         if win == None:
