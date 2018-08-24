@@ -69,7 +69,7 @@ def main():
         for j in values:
             temp.append(j)
         matrix.append(temp)
-    print("matrix: ",matrix)
+    #print("matrix: ",matrix)
     tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
     win = None
     win = row_check(matrix)
