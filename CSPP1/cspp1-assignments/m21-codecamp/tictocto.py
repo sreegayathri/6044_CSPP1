@@ -59,7 +59,7 @@ def main():
             temp.append(j)
         matrix.append(temp)
     tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
-    if tictokto_matrix == expr is True:
+    if tictokto_matrix is True:
         win = row_check(matrix)
         if win is None:
             win = col_check(matrix)
