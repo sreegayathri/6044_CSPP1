@@ -65,9 +65,9 @@ def winner_ttt(matrix):
     win = row_check(matrix)
     if win == None:
         win = col_check(matrix)
-    elif win == None:
+    if win == None:
         win = diagonal_check(matrix)
-    elif win == None:
+    if win == None:
         print("draw")
     return win
 
@@ -75,7 +75,7 @@ def main():
     """ main function of the matrix-operation"""
     try:
     # read matrix
-    	mx = read_data()
+        mx = read_data()
     except ValueError:
         print("Error: Invalid input for the matrix")
     else:
