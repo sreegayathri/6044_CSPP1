@@ -39,6 +39,7 @@ def matrix_check(matrix):
             if j == 'x' or j == 'o' or j == '.':
                 pass
             else:
+                print("j Value: ",j)
                 return False
     return True
 def matrix_game(matrix):
