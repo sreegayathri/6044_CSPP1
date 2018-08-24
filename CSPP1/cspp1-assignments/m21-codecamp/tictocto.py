@@ -25,7 +25,7 @@ def matrix_check(matrix):
     """to check if input has values x/o/."""
     for element in matrix:
         for j in element:
-            if j == 'x' or j == 'o' or j == '.':
+            if j in 'x' or j in 'o' or j in '.':
                 pass
             else:
                 return False
