@@ -76,7 +76,7 @@ def main():
     """ main function of the matrix-operation"""
     try:
     # read matrix
-    mx = read_data()
+    	mx = read_data()
     except ValueError:
         print("Error: Invalid input for the matrix")
     else:
