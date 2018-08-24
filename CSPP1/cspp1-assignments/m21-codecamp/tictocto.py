@@ -25,10 +25,6 @@ def diagonal_check(matrix):
 def read_data():
 
     matrix = []
-    # try:
-    # except TypeError:
-    #     print("Error: Invalid input for the matrix")
-    # else:
     for _ in range(0, 3, 1):
         values = input()
         temp = values.split(" ")
@@ -38,18 +34,19 @@ def read_data():
         matrix.append(k)
     return matrix
 def matrix_check(matrix):
-    for row in range(3):
-        for column in range(3):
-            if (matrix[row][column] != 'x' and matrix[row][column] != 'o'
-                    and matrix[row][column] != '.'):
-                return True
-    return False
+    for element in matrix:
+        for j in element:
+            if j == 'x' or j == 'o' or j == '.':
+                pass
+            else:
+                return False
+    return True
 def matrix_game(matrix):
     element_x = 0
     element_o = 0
     element_dot = 0
-    for inputs in matrix:
-        for j in inputs:
+    for element in matrix:
+        for j in element:
             if j == 'x':
                 element_x += 1
             elif j == 'o':
