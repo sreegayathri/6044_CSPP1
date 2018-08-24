@@ -1,3 +1,4 @@
+"""to write a program to check possible outcomes while playing tictactto"""
 def row_check(matrix):
     """to check if row has similar values x/o/."""
     if matrix[0][0] == matrix[0][1] == matrix[0][2]:
@@ -46,7 +47,7 @@ def matrix_game(matrix):
         return False
     elif abs(element_x - element_o == 0) and element_dot > 0:
         return False
-    return True 
+    return True
 def main():
     """ main function of the matrix-operation"""
     win = None
