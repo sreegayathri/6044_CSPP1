@@ -22,17 +22,17 @@ def diagonal_check(matrix):
         return matrix[0][0]
     if matrix[0][2] == matrix[1][1] == matrix[2][0]:
         return matrix[1][1]
-def read_data():
+# def read_data():
 
-    matrix = []
-    for _ in range(0, 3, 1):
-        values = input()
-        temp = values.split(" ")
-        k = []
-        for j in temp:
-            k.append(j)
-        matrix.append(k)
-    return matrix
+#     matrix = []
+#     for _ in range(0, 3, 1):
+#         values = input()
+#         temp = values.split(" ")
+#         k = []
+#         for j in temp:
+#             k.append(j)
+#         matrix.append(k)
+#     return matrix
 def matrix_check(matrix):
     for element in matrix:
         for j in element:
@@ -69,6 +69,7 @@ def main():
         for j in values:
             temp.append(j)
         matrix.append(temp)
+    print("matrix: ",matrix)
     tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
     win = None
     win = row_check(matrix)
