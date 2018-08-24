@@ -9,7 +9,7 @@ def row_check(matrix):
 
 def col_check(matrix):
 
-    if matrix[0][0] == matrix[0][1] == matrix[0][2]:
+    if matrix[0][0] == matrix[1][0] == matrix[2][0]:
         return matrix[0][0]
     if matrix[0][1] == matrix[1][1] == matrix[2][1]:
         return matrix[1][1]
@@ -39,7 +39,6 @@ def matrix_check(matrix):
             if j == 'x' or j == 'o' or j == '.':
                 pass
             else:
-                print("j Value: ",j)
                 return False
     return True
 def matrix_game(matrix):
@@ -73,8 +72,8 @@ def main():
         matrix.append(temp)
     #print("matrix: ",matrix)
     tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
-    win = row_check(matrix)
-    if matrix_check == True:
+    if tictokto_matrix == True:
+        win = row_check(matrix)
         if win == None:
             win = col_check(matrix)
         if win == None:
@@ -85,7 +84,7 @@ def main():
             print(win)
 
     else:
-        if not row_check(matrix):
+        if not matrix_check(matrix):
             print("invalid input")
         if  not matrix_game(matrix):
             print("invalid game")
