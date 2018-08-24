@@ -37,13 +37,14 @@ def read_data():
             k.append(j)
         matrix.append(k)
     return matrix
-def check_ttt(matrix):
+def matrix_check(matrix):
     for row in range(3):
         for column in range(3):
             if (matrix[row][column] != 'x' and matrix[row][column] != 'o'
                     and matrix[row][column] != '.'):
                 return True
     return False
+def matrix_game(matrix):
     element_x = 0
     element_o = 0
     element_dot = 0
@@ -60,27 +61,30 @@ def check_ttt(matrix):
     elif abs(element_x - element_o == 0) and element_dot > 0:
         return False
     return True 
-def winner_ttt(matrix):
-    win = None
-    win = row_check(matrix)
-    if win == None:
-        win = col_check(matrix)
-    if win == None:
-        win = diagonal_check(matrix)
-    if win == None:
-        print("draw")
-    return win
 
 def main():
     """ main function of the matrix-operation"""
-    try:
     # read matrix
-        mx = read_data()
-    except ValueError:
-        print("Error: Invalid input for the matrix")
+    mx = read_data()
+    valid_grid = is_valid_grid(grid) and is_valid_game(grid)
+    win = None
+    win = row_check(matrix)
+    if matrix_check == True:
+        if win == None:
+            win = col_check(matrix)
+        if win == None:
+            win = diagonal_check(matrix)
+        if win == None:
+            print("draw")
+        else:
+            print(win)
+
     else:
-        won_xoroordot = winner_ttt(mx)
-        print(won_xoroordot)
+        if not row_check(matrix):
+            print("invalid input")
+        if  not matrix_game(matrix):
+            print("invalid game")
+
 
 if __name__ == '__main__':
     main()
