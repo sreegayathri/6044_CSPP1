@@ -62,24 +62,30 @@ def matrix_game(matrix):
 def main():
     """ main function of the matrix-operation"""
     # read matrix
-    mx = read_data()
-    tictokto_matrix = matrix_check(mx) and matrix_game(mx)
+    matrix = []
+    for i in range(0, 3, 1):
+        values = input().split(' ')
+        temp = []
+        for j in values:
+            temp.append(j)
+        matrix.append(temp)
+    tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
     win = None
-    win = row_check(mx)
+    win = row_check(matrix)
     if matrix_check == True:
         if win == None:
-            win = col_check(mx)
+            win = col_check(matrix)
         if win == None:
-            win = diagonal_check(mx)
+            win = diagonal_check(matrix)
         if win == None:
             print("draw")
         else:
             print(win)
 
     else:
-        if not row_check(mx):
+        if not row_check(matrix):
             print("invalid input")
-        if  not matrix_game(mx):
+        if  not matrix_game(matrix):
             print("invalid game")
 
 if __name__ == '__main__':
