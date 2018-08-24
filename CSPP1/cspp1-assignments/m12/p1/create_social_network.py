@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 
-def create_social_network(data_):
+def create_social_network(data):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -24,7 +24,7 @@ def create_social_network(data_):
         finally add the person and the followers to a data_onary and
         return the data_onary
 
-        Caution: watch out for trailing spaces while splitting the string.
+        Caution: watch out for trTailing spaces while splitting the string.
         It may cause your test cases to fail although your output may be right
 
         Error handling case:
