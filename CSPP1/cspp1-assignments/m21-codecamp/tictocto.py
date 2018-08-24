@@ -36,6 +36,7 @@ def read_data():
         for j in temp:
             k.append(j)
         matrix.append(k)
+    return matrix
 def check_ttt(matrix):
     for row in range(3):
         for column in range(3):
