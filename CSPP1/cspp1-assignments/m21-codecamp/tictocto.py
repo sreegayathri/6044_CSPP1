@@ -20,7 +20,7 @@ def diagonal_check(matrix):
 
     if matrix[0][0] == matrix[1][1] == matrix[2][2]:
         return matrix[0][0]
-    if matrix[0][1] == matrix[1][1] == matrix[2][0]:
+    if matrix[0][2] == matrix[1][1] == matrix[2][0]:
         return matrix[1][1]
 def read_data():
 
