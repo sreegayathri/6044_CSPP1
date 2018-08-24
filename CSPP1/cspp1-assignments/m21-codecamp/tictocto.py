@@ -14,7 +14,7 @@ def col_check(matrix):
     if matrix[0][1] == matrix[1][1] == matrix[2][1]:
         return matrix[1][1]
     if matrix[0][2] == matrix[1][2] == matrix[2][2]:
-        return matrix[2][0]
+        return matrix[0][2]
 
 def diagonal_check(matrix):
 
