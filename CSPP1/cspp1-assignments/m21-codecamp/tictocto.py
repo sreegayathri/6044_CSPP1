@@ -81,7 +81,7 @@ def main():
     except ValueError:
         print("Error: Invalid input for the matrix")
     else:
-        won_xoroordot = winner_ttt(matrix)
+        won_xoroordot = winner_ttt(mx)
         print(won_xoroordot)
 
 if __name__ == '__main__':
