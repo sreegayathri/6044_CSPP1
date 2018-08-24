@@ -48,8 +48,9 @@ def matrix_game(matrix):
     if abs(element_x - element_o == 0) and element_dot > 0:
         return False
     return True
-def read_ttt(matrix):
-    
+def main():
+    """ main function of the matrix-operation"""
+    win = None
     matrix = []
     for i in range(0, 3, 1):
         values = input().split(' ')
@@ -57,26 +58,21 @@ def read_ttt(matrix):
         for j in values:
             temp.append(j)
         matrix.append(temp)
-    return matrix
-def main():
-    """ main function of the matrix-operation"""
-    ttt_mx = read_ttt(matrix)
-    win = None
-    tictokto_matrix = matrix_check(ttt_mx) and matrix_game(ttt_mx)
+    tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
     if tictokto_matrix == True:
-        win = row_check(ttt_mx)
+        win = row_check(matrix)
         if win == None:
-            win = col_check(ttt_mx)
+            win = col_check(matrix)
         if win == None:
-            win = diagonal_check(ttt_mx)
+            win = diagonal_check(matrix)
         if win == None:
             print("draw")
         else:
             print(win)
     else:
-        if not matrix_check(ttt_mx):
+        if not matrix_check(matrix):
             print("invalid input")
-        if  not matrix_game(ttt_mx):
+        if  not matrix_game(matrix):
             print("invalid game")
 
 if __name__ == '__main__':
