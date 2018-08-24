@@ -36,7 +36,7 @@ def read_data():
         for j in temp:
             k.append(j)
         matrix.append(k)
-def check_ttt:
+def check_ttt(matrix):
     for row in range(3):
         for column in range(3):
             if (matrix[row][column] != 'x' and matrix[row][column] != 'o'
