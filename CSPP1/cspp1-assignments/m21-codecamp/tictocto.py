@@ -52,7 +52,7 @@ def main():
     """ main function of the matrix-operation"""
     win = None
     matrix = []
-    for i in range(0, 3, 1):
+    for _ in range(0, 3, 1):
         values = input().split(' ')
         temp = []
         for j in values:
