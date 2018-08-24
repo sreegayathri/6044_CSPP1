@@ -69,8 +69,6 @@ def winner_ttt(matrix):
         win = diagonal_check(matrix)
     elif win == None:
         print("draw")
-    else:
-        print("win")
     return win
 
 def main():
