@@ -66,7 +66,7 @@ def main():
     """ main function of the matrix-operation"""
     # read matrix
     mx = read_data()
-    valid_grid = is_valid_grid(grid) and is_valid_game(grid)
+    tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
     win = None
     win = row_check(matrix)
     if matrix_check == True:
