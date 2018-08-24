@@ -61,11 +61,11 @@ def main():
     tictokto_matrix = matrix_check(matrix) and matrix_game(matrix)
     if tictokto_matrix == True:
         win = row_check(matrix)
-        if win == None:
+        if win is None:
             win = col_check(matrix)
-        if win == None:
+        if win is None:
             win = diagonal_check(matrix)
-        if win == None:
+        if win is None:
             print("draw")
         else:
             print(win)
