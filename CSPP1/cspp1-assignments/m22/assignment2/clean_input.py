@@ -8,7 +8,7 @@ def clean_string(string):
     z=""
     letter=""
     for i in range(len(string)):
-        if string[i] == "!" or string[i] == "@" or string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or string[i] == "^" or string[i] == "&"or string[i] == "*" or string[i] == " ":
+        if string[i] == "(" or string[i] == ")" or string[i] == "!" or string[i] == "@" or string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or string[i] == "^" or string[i] == "&"or string[i] == "*" or string[i] == " ":
             letter = letter + z
         else:
             letter = letter + string[i]
