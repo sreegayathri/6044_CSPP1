@@ -7,7 +7,8 @@ def clean_string(string_clear):
     """conditions for the program"""
     z_empty = ""
     letter_clear = ""
-    for i in enumerate(string_clear):
+    length_clear = len(string_clear)
+    for i in enumerate(length_clear):
         if string_clear[i] == "(!@#$%^&*)>.,''" or string_clear[i] == ")" or string_clear[i] == "!" or string_clear[i] == "@" or string_clear[i] == "." or string_clear[i] == "#" or string_clear[i] == "$" or string_clear[i] == "%" or string_clear[i] == "^" or string_clear[i] == "&"or string_clear[i] == "*" or string_clear[i] == " ":
             letter_clear = letter_clear + z_empty
         else:
