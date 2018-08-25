@@ -4,11 +4,16 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-
+    """to give conditions for a alpha-symobl word/sentence"""
     z=""
     letter=""
     for i in range(len(string)):
-        if string[i] == "(" or string[i] == ")" or string[i] == "!" or string[i] == "@" or string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or string[i] == "^" or string[i] == "&"or string[i] == "*" or string[i] == " ":
+        if string[i] == "(" or string[i] == ")" or
+            string[i] == "!" or string[i] == "@" or
+            string[i] == "." or string[i] == "#" or
+            string[i] == "$" or string[i] == "%" or
+            string[i] == "^" or string[i] == "&" or
+            string[i] == "*" or string[i] == " ":
             letter = letter + z
         else:
             letter = letter + string[i]
