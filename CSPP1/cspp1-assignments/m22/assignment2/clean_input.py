@@ -1,21 +1,18 @@
 '''
-Write a function to clean up a given string by removing
-the special characters and retain
+Write a function to clean up a given string by removing the special characters and retain 
 alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    """to give conditions for a alpha-symobl word/sentence"""
-    z_a = ""
-    letter_clean = ""
-    for i in enumerate(string):
-        if (string[i] == "(" or string[i] == ")" or string[i] == "!" or string[i] == "@" or
-            string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or
-            string[i] == "^" or string[i] == "&" or string[i] == "*" or string[i] == " "):
-            letter_clean = letter_clean + z_a
+    """conditions for the program"""
+    z = ""
+    letter = ""
+    for i in range(len(string)):
+        if string[i] == "(" or string[i] == ")" or string[i] == "!" or string[i] == "@" or string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or string[i] == "^" or string[i] == "&"or string[i] == "*" or string[i] == " ":
+            letter = letter + z
         else:
-            letter_clean = letter_clean + string[i]
-    return letter_clean
+            letter = letter + string[i]
+    return letter
 
 def main():
     string = input()
