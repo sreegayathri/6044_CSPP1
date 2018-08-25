@@ -1,22 +1,23 @@
 '''
-Write a function to clean up a given string by removing the special characters and retain 
+Write a function to clean up a given string_clear by removing the special characters and retain
 alphabets in both upper and lower case and numbers.
 '''
 
-def clean_string(string):
+def clean_string_clear(string_clear):
     """conditions for the program"""
-    z = ""
-    letter = ""
-    for i in range(len(string)):
-        if string[i] == "(" or string[i] == ")" or string[i] == "!" or string[i] == "@" or string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or string[i] == "^" or string[i] == "&"or string[i] == "*" or string[i] == " ":
-            letter = letter + z
+    z_empty = ""
+    letter_clear = ""
+    for i in enumerate(string_clear):
+        if string_clear[i] == "(" or string_clear[i] == ")" or string_clear[i] == "!" or string_clear[i] == "@" or string_clear[i] == "." or string_clear[i] == "#" or string_clear[i] == "$" or string_clear[i] == "%" or string_clear[i] == "^" or string_clear[i] == "&"or string_clear[i] == "*" or string_clear[i] == " ":
+            letter_clear = letter_clear + z_empty
         else:
-            letter = letter + string[i]
-    return letter
+            letter_clear = letter_clear + string_clear[i]
+    return letter_clear
 
 def main():
-    string = input()
-    print(clean_string(string))
+    """main function of this program"""
+    string_clear = input()
+    print(clean_string_clear(string_clear))
 
 if __name__ == '__main__':
     main()
