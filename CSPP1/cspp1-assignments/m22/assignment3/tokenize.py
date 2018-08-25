@@ -3,11 +3,13 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 def tokenize(string):
-    frequency = [string.count(w) for w in string]
+    """conditions for the program"""
+    frequency = [string.count(w) for w in lines]
     return dict(zip(string, frequency))
 
 
 def main():
+    """main function of the program"""
     lines = int(input())
     string = input().split(" ")
     print(tokenize(string))
