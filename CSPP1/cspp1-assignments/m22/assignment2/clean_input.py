@@ -3,12 +3,12 @@ Write a function to clean up a given string_clear by removing the special charac
 alphabets in both upper and lower case and numbers.
 '''
 
-def clean_string_clear(string_clear):
+def clean_string(string_clear):
     """conditions for the program"""
     z_empty = ""
     letter_clear = ""
-    for i in enumerate(string_clear):
-        if string_clear[i] == "(" or string_clear[i] == ")" or string_clear[i] == "!" or string_clear[i] == "@" or string_clear[i] == "." or string_clear[i] == "#" or string_clear[i] == "$" or string_clear[i] == "%" or string_clear[i] == "^" or string_clear[i] == "&"or string_clear[i] == "*" or string_clear[i] == " ":
+    for i in enumerate(int(string_clear)):
+        if string_clear[i] == "(!@#$%^&*)>.,_|''":
             letter_clear = letter_clear + z_empty
         else:
             letter_clear = letter_clear + string_clear[i]
@@ -17,7 +17,7 @@ def clean_string_clear(string_clear):
 def main():
     """main function of this program"""
     string_clear = input()
-    print(clean_string_clear(string_clear))
+    print(clean_string(string_clear))
 
 if __name__ == '__main__':
     main()
