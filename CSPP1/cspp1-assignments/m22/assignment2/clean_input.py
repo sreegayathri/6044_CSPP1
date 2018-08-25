@@ -12,3 +12,15 @@ def main():
 
 if __name__ == '__main__':
     main()
+"""text = []
+    for i in range(lines):
+        text_input = input()
+        k_text = text_input*lines
+        text.append(k_text)
+    return text
+    
+
+def main():
+    lines = int(input())
+    # for i in range(lines):
+    print(sentences(lines)"""
