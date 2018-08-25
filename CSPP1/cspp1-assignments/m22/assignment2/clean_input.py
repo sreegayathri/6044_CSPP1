@@ -4,7 +4,15 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    pass
+
+    z=""
+    letter=""
+    for i in range(len(string)):
+        if string[i] == "!" or string[i] == "@" or string[i] == "#" or string[i] == "$" or string[i] == "%" or string[i] == "^" or string[i] == "&"or string[i] == "*" or string[i] == " ":
+            letter = letter + z
+        else:
+            letter = letter + string[i]
+    return letter
 
 def main():
     string = input()
@@ -12,15 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-"""text = []
-    for i in range(lines):
-        text_input = input()
-        k_text = text_input*lines
-        text.append(k_text)
-    return text
-    
-
-def main():
-    lines = int(input())
-    # for i in range(lines):
-    print(sentences(lines)"""
