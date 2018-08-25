@@ -4,13 +4,14 @@ each word
 '''
 def tokenize(string):
     """conditions for the program"""
-    frequency = [string.count(w) for w in string]
+    for i in line:
+        frequency = [string.count(w) for w in string]
     return dict(zip(string, frequency))
 
 
 def main():
     """main function of the program"""
-    # lines = int(input())
+    lines = int(input())
     string = input().split(" ")
     print(tokenize(string))
     # print("frequencies\n"+ str(string)+ "\n")
