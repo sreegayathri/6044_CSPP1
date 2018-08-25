@@ -6,13 +6,11 @@ def tokenize(string):
     frequency = [string.count(w) for w in string]
     return dict(zip(string, frequency))
 
-    
-            
+
 def main():
     lines = int(input())
-    string = input()
-    # .split()
-
+    string = input().split(" ")
+    print(tokenize(string))
     # print("frequencies\n"+ str(string)+ "\n")
 
 if __name__ == '__main__':
