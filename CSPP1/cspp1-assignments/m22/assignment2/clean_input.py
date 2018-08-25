@@ -9,12 +9,9 @@ def clean_string(string):
     z_a = ""
     letter_clean = ""
     for i in enumerate(string):
-        if (string[i] == "(" or string[i] == ")" or\
-            string[i] == "!" or string[i] == "@" or\
-            string[i] == "." or string[i] == "#" or\
-            string[i] == "$" or string[i] == "%" or\
-            string[i] == "^" or string[i] == "&" or\
-            string[i] == "*" or string[i] == " "):
+        if (string[i] == "(" or string[i] == ")" or string[i] == "!" or string[i] == "@" or
+            string[i] == "." or string[i] == "#" or string[i] == "$" or string[i] == "%" or
+            string[i] == "^" or string[i] == "&" or string[i] == "*" or string[i] == " "):
             letter_clean = letter_clean + z_a
         else:
             letter_clean = letter_clean + string[i]
