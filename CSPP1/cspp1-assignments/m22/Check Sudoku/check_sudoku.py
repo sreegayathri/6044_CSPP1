@@ -18,8 +18,8 @@ def check_sudoku(sudoku):
             if j in '1' or j in '2' or j in '3' or j in '4' or j in '5' or j in '6' or j in '7' or j in '8' or j in '9':
                 pass
             else:
-                return False
-    return True
+                return True
+    return False
 
 def main():
     '''
@@ -35,7 +35,7 @@ def main():
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
-    print(sudoku)
+    #print(sudoku)
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
