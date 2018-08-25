@@ -69,15 +69,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-"""   my_dict = {}
-    values = data.split()
-    j = 2
-    if values[1] != 'follows':
-        return my_dict
-    for iterate in range(0, lines):
-        my_dict[values[iterate*3]] = values[j].split(',')
-        j += 3
-    return my_dict
+"""   
 def main():
     '''
         handling testcase input and printing output
