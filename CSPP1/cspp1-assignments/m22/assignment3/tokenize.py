@@ -10,7 +10,7 @@ def tokenize(string):
 
 def main():
     """main function of the program"""
-    lines = int(input())
+    # lines = int(input())
     string = input().split(" ")
     print(tokenize(string))
     # print("frequencies\n"+ str(string)+ "\n")
