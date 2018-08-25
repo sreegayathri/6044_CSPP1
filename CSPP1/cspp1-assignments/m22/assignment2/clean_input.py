@@ -8,11 +8,11 @@ def clean_string(string_clear):
     z_empty = ""
     letter_clear = ""
     length_clear = len(string_clear)
-    for i in enumerate(length_clear):
-        if string_clear[i] == "(!@#$%^&*)>.,''" or string_clear[i] == ")" or string_clear[i] == "!" or string_clear[i] == "@" or string_clear[i] == "." or string_clear[i] == "#" or string_clear[i] == "$" or string_clear[i] == "%" or string_clear[i] == "^" or string_clear[i] == "&"or string_clear[i] == "*" or string_clear[i] == " ":
+    for char in range(length_clear):
+        if string_clear[char] == "(" or string_clear[char] == ")" or string_clear[char] == "!" or string_clear[char] == "@" or string_clear[char] == "." or string_clear[char] == "#" or string_clear[char] == "$" or string_clear[char] == "%" or string_clear[char] == "^" or string_clear[char] == "&" or string_clear[char] == "*" or string_clear[char] == " ":
             letter_clear = letter_clear + z_empty
         else:
-            letter_clear = letter_clear + string_clear[i]
+            letter_clear = letter_clear + string_clear[char]
     return letter_clear
 
 def main():
