@@ -4,7 +4,7 @@ each word
 '''
 def tokenize(string):
     """conditions for the program"""
-    frequency = [string.count(w) for w in lines]
+    frequency = [string.count(w) for w in string]
     return dict(zip(string, frequency))
 
 
